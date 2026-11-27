@@ -1,0 +1,5163 @@
+[
+  {
+    "id": "failure_types__B03_grasp_not_formed__01",
+    "title": "Bottle grasp does not form",
+    "task": "pick_diverse_bottles",
+    "case_id": "pick_diverse_bottles/seed_1000000632",
+    "category": "failure_types",
+    "group": "Grasp not formed",
+    "instruction": "Use both arms to grasp the white-capped bottle and the bottle with flat sides and logo together.",
+    "video": "assets/pick_diverse_bottles__seed_1000000632.mp4",
+    "fps": 30.0,
+    "frame_count": 401,
+    "frames": [
+      {
+        "frame": 24,
+        "caption": "Before / interaction",
+        "image": "assets/case-00-stage-0.png"
+      },
+      {
+        "frame": 33,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-00-stage-1.png"
+      },
+      {
+        "frame": 45,
+        "caption": "Later observation",
+        "image": "assets/case-00-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B03",
+        "name": "Grasp not formed",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C11",
+        "name": "Grasp unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 24,
+      "end_frame": 37,
+      "checkpoint_frame": 37,
+      "evidence": "在帧24-37期间，右臂夹爪接近并尝试闭合抓取扁形带logo瓶子（bottle2）。夹爪接触瓶体后物体发生偏移，但右爪完全闭合至0.0m间距（fr_joint7=0.0, fr_joint8=0.0），未能建立有效夹持约束，随后右臂空爪上抬离开，bottle2遗留于桌面并倾倒。",
+      "recovery_assessment": {
+        "frames": [
+          37,
+          107,
+          240,
+          400
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 24,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 24,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 33,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 24
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 37,
+        "id": "semantic_004",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 24
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 53,
+        "id": "semantic_005",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 33
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 64,
+        "id": "semantic_006",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 37
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 62,
+        "id": "semantic_007",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 53
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Hold",
+        "end_frame": 400,
+        "id": "semantic_008",
+        "module_code": "MOD.HANDOVER_HOLD",
+        "semantic_status": "single",
+        "start_frame": 62
+      }
+    ]
+  },
+  {
+    "id": "failure_types__B03_grasp_not_formed__02",
+    "title": "Block remains on the table after grasp",
+    "task": "blocks_ranking_size",
+    "case_id": "blocks_ranking_size/seed_30300047",
+    "category": "failure_types",
+    "group": "Grasp not formed",
+    "instruction": "Transfer large block, medium block, small block to the center, aligning from largest to smallest.",
+    "video": "assets/blocks_ranking_size__seed_30300047.mp4",
+    "fps": 30.0,
+    "frame_count": 1201,
+    "frames": [
+      {
+        "frame": 128,
+        "caption": "Before / interaction",
+        "image": "assets/case-01-stage-0.png"
+      },
+      {
+        "frame": 137,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-01-stage-1.png"
+      },
+      {
+        "frame": 160,
+        "caption": "Later observation",
+        "image": "assets/case-01-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B03",
+        "name": "Grasp not formed",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C11",
+        "name": "Grasp unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "recovered",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 128,
+      "end_frame": 197,
+      "checkpoint_frame": 160,
+      "evidence": "左臂在第128-137帧闭合夹爪尝试抓取粉色方块（block2），夹爪触碰方块边缘后完全闭合脱落，第140-160帧夹爪空合抬起，粉色方块仍留在原支撑面。",
+      "recovery_assessment": {
+        "frames": [
+          160,
+          197,
+          240,
+          268
+        ],
+        "status": "recovered"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 27,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 35,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 27
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 46,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 35
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 65,
+        "id": "semantic_004",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 46
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 77,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 65
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 117,
+        "id": "semantic_006",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 77
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 128,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 117
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 140,
+        "id": "semantic_008",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 128
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 190,
+        "id": "semantic_009",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 140
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 202,
+        "id": "semantic_010",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 190
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 234,
+        "id": "semantic_011",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 202
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 243,
+        "id": "semantic_012",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 234
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 251,
+        "id": "semantic_013",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 243
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 265,
+        "id": "semantic_014",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 251
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 276,
+        "id": "semantic_015",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 265
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.ReturnToHome",
+        "end_frame": 309,
+        "id": "semantic_016",
+        "module_code": "MOD.CONTROL_RECOVERY",
+        "semantic_status": "single",
+        "start_frame": 276
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 320,
+        "id": "semantic_017",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 299
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 326,
+        "id": "semantic_018",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 320
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 354,
+        "id": "semantic_019",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 326
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 384,
+        "id": "semantic_020",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 354
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Push",
+        "end_frame": 715,
+        "id": "semantic_021",
+        "module_code": "MOD.CONTACT_MOTION",
+        "semantic_status": "single",
+        "start_frame": 384
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Release",
+        "end_frame": 729,
+        "id": "semantic_022",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 715
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 855,
+        "id": "semantic_023",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 729
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 864,
+        "id": "semantic_024",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 855
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 979,
+        "id": "semantic_025",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 864
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 1004,
+        "id": "semantic_026",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 979
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 1045,
+        "id": "semantic_027",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 1004
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 1065,
+        "id": "semantic_028",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 1045
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 1130,
+        "id": "semantic_029",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 1065
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 1142,
+        "id": "semantic_030",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 1130
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Push",
+        "end_frame": 1200,
+        "id": "semantic_031",
+        "module_code": "MOD.CONTACT_MOTION",
+        "semantic_status": "single",
+        "start_frame": 1142
+      }
+    ]
+  },
+  {
+    "id": "failure_types__B10_contact_disturbance__01",
+    "title": "Contact disrupts a block stack",
+    "task": "stack_blocks_three",
+    "case_id": "stack_blocks_three/seed_1000000824",
+    "category": "failure_types",
+    "group": "Contact disturbance",
+    "instruction": "Build upward from red block to green block to blue block at the table's center.",
+    "video": "assets/stack_blocks_three__seed_1000000824.mp4",
+    "fps": 30.0,
+    "frame_count": 1201,
+    "frames": [
+      {
+        "frame": 329,
+        "caption": "Before / interaction",
+        "image": "assets/case-02-stage-0.png"
+      },
+      {
+        "frame": 337,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-02-stage-1.png"
+      },
+      {
+        "frame": 345,
+        "caption": "Later observation",
+        "image": "assets/case-02-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B10",
+        "name": "Contact disturbance",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C03",
+        "name": "Support unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_002",
+      "start_frame": 329,
+      "end_frame": 386,
+      "checkpoint_frame": 371,
+      "evidence": "右臂在f329-f370向下运动时，夹爪撞击并触碰已堆叠好的方块塔，导致绿色方块与蓝色方块被非预期撞飞/脱落出桌面中心区域（f371及之后block2、block3坐标剧烈偏离）。",
+      "recovery_assessment": {
+        "frames": [
+          400,
+          800,
+          1200
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 42,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 50,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 42
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 80,
+        "id": "semantic_003",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 50
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 89,
+        "id": "semantic_004",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 80
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 130,
+        "id": "semantic_005",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 89
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 138,
+        "id": "semantic_006",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 130
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 165,
+        "id": "semantic_007",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 138
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 173,
+        "id": "semantic_008",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 165
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.ReturnToHome",
+        "end_frame": 208,
+        "id": "semantic_009",
+        "module_code": "MOD.CONTROL_RECOVERY",
+        "semantic_status": "single",
+        "start_frame": 173
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 210,
+        "id": "semantic_010",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 197
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 217,
+        "id": "semantic_011",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 210
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 241,
+        "id": "semantic_012",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 217
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Place",
+        "end_frame": 249,
+        "id": "semantic_013",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 241
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.ReturnToHome",
+        "end_frame": 329,
+        "id": "semantic_014",
+        "module_code": "MOD.CONTROL_RECOVERY",
+        "semantic_status": "single",
+        "start_frame": 249
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 370,
+        "id": "semantic_015",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 329
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 379,
+        "id": "semantic_016",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 370
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 478,
+        "id": "semantic_017",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 379
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Release",
+        "end_frame": 487,
+        "id": "semantic_018",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 478
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 881,
+        "id": "semantic_019",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 487
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 927,
+        "id": "semantic_020",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 869
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 936,
+        "id": "semantic_021",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 927
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 1200,
+        "id": "semantic_022",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 936
+      }
+    ]
+  },
+  {
+    "id": "failure_types__B10_contact_disturbance__02",
+    "title": "Withdrawal tips the container",
+    "task": "place_cans_plasticbox",
+    "case_id": "place_cans_plasticbox/seed_72600075",
+    "category": "failure_types",
+    "group": "Contact disturbance",
+    "instruction": "Using dual arms, place the green red metallic soda can and the beverage can with red green graphics inside the rectangular storage box with grooves",
+    "video": "assets/place_cans_plasticbox__seed_72600075.mp4",
+    "fps": 30.0,
+    "frame_count": 801,
+    "frames": [
+      {
+        "frame": 91,
+        "caption": "Before / interaction",
+        "image": "assets/case-03-stage-0.png"
+      },
+      {
+        "frame": 107,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-03-stage-1.png"
+      },
+      {
+        "frame": 160,
+        "caption": "Later observation",
+        "image": "assets/case-03-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B10",
+        "name": "Contact disturbance",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C04",
+        "name": "Containment unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_002",
+      "start_frame": 91,
+      "end_frame": 160,
+      "checkpoint_frame": 107,
+      "evidence": "右臂将右侧罐子（object2）释放入收纳盒后进行撤离平移，末端夹爪在移动中与蓝色塑料盒边缘发生机械挂碰与干涉，导致塑料盒被大幅挑起倾覆，已放置的object2被甩出盒体并翻滚跌落至桌面外地面，终态未能保持在收纳盒内部。",
+      "recovery_assessment": {
+        "frames": [
+          107,
+          160
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 28,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 28,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 41,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 28
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 41,
+        "id": "semantic_004",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 28
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 51,
+        "id": "semantic_005",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 41
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 68,
+        "id": "semantic_006",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 41
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 78,
+        "id": "semantic_007",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 51
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Release",
+        "end_frame": 91,
+        "id": "semantic_008",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 78
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 223,
+        "id": "semantic_009",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 91
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Retry",
+        "end_frame": 576,
+        "id": "semantic_010",
+        "module_code": "MOD.CONTROL_RECOVERY",
+        "semantic_status": "single",
+        "start_frame": 223
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 800,
+        "id": "semantic_011",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 576
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 800,
+        "id": "semantic_012",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 584
+      }
+    ]
+  },
+  {
+    "id": "failure_types__B04_grasp_slip_loss__01",
+    "title": "Handle slips from the gripper",
+    "task": "open_microwave",
+    "case_id": "open_microwave/seed_1000000160",
+    "category": "failure_types",
+    "group": "Grasp slip / loss",
+    "instruction": "Pull open the door of the countertop microwave using the left arm.",
+    "video": "assets/open_microwave__seed_1000000160.mp4",
+    "fps": 30.0,
+    "frame_count": 1076,
+    "frames": [
+      {
+        "frame": 72,
+        "caption": "Before / interaction",
+        "image": "assets/case-04-stage-0.png"
+      },
+      {
+        "frame": 110,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-04-stage-1.png"
+      },
+      {
+        "frame": 143,
+        "caption": "Later observation",
+        "image": "assets/case-04-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B04",
+        "name": "Grasp slip / loss",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C11",
+        "name": "Grasp unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "recovered",
+    "terminal_success": 1,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 104,
+      "end_frame": 143,
+      "checkpoint_frame": 139,
+      "evidence": "左夹爪在拉门过程中（门开度曾达0.135），于第104至139帧把手脱离夹爪，夹爪完全闭合（指间距为0），门回弹至0.066，拉门动作中断。",
+      "recovery_assessment": {
+        "frames": [
+          139,
+          865,
+          932,
+          1075
+        ],
+        "status": "recovered"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 21,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 34,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 21
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Open",
+        "end_frame": 139,
+        "id": "semantic_003",
+        "module_code": "MOD.ARTICULATION",
+        "semantic_status": "single",
+        "start_frame": 34
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 894,
+        "id": "semantic_004",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 865
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Open",
+        "end_frame": 1075,
+        "id": "semantic_005",
+        "module_code": "MOD.ARTICULATION",
+        "semantic_status": "single",
+        "start_frame": 894
+      }
+    ]
+  },
+  {
+    "id": "failure_types__B04_grasp_slip_loss__02",
+    "title": "Block slips from the gripper",
+    "task": "blocks_ranking_size",
+    "case_id": "blocks_ranking_size/seed_30300047",
+    "category": "failure_types",
+    "group": "Grasp slip / loss",
+    "instruction": "Transfer large block, medium block, small block to the center, aligning from largest to smallest.",
+    "video": "assets/blocks_ranking_size__seed_30300047.mp4",
+    "fps": 30.0,
+    "frame_count": 1201,
+    "frames": [
+      {
+        "frame": 326,
+        "caption": "Before / interaction",
+        "image": "assets/case-05-stage-0.png"
+      },
+      {
+        "frame": 343,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-05-stage-1.png"
+      },
+      {
+        "frame": 359,
+        "caption": "Later observation",
+        "image": "assets/case-05-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B04",
+        "name": "Grasp slip / loss",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C11",
+        "name": "Grasp unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_002",
+      "start_frame": 320,
+      "end_frame": 359,
+      "checkpoint_frame": 359,
+      "evidence": "右臂于第320-326帧闭爪夹取大号青色方块（block1），在第333-354帧向上移动时方块翻转倾斜并滑出夹爪，于第344帧跌落回桌面，夹爪完全闭合空夹。",
+      "recovery_assessment": {
+        "frames": [
+          359,
+          720
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 27,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 35,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 27
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 46,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 35
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 65,
+        "id": "semantic_004",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 46
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 77,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 65
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 117,
+        "id": "semantic_006",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 77
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 128,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 117
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 140,
+        "id": "semantic_008",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 128
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 190,
+        "id": "semantic_009",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 140
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 202,
+        "id": "semantic_010",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 190
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 234,
+        "id": "semantic_011",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 202
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 243,
+        "id": "semantic_012",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 234
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 251,
+        "id": "semantic_013",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 243
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 265,
+        "id": "semantic_014",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 251
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 276,
+        "id": "semantic_015",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 265
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.ReturnToHome",
+        "end_frame": 309,
+        "id": "semantic_016",
+        "module_code": "MOD.CONTROL_RECOVERY",
+        "semantic_status": "single",
+        "start_frame": 276
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 320,
+        "id": "semantic_017",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 299
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 326,
+        "id": "semantic_018",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 320
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 354,
+        "id": "semantic_019",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 326
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 384,
+        "id": "semantic_020",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 354
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Push",
+        "end_frame": 715,
+        "id": "semantic_021",
+        "module_code": "MOD.CONTACT_MOTION",
+        "semantic_status": "single",
+        "start_frame": 384
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Release",
+        "end_frame": 729,
+        "id": "semantic_022",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 715
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 855,
+        "id": "semantic_023",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 729
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 864,
+        "id": "semantic_024",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 855
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 979,
+        "id": "semantic_025",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 864
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 1004,
+        "id": "semantic_026",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 979
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 1045,
+        "id": "semantic_027",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 1004
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 1065,
+        "id": "semantic_028",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 1045
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 1130,
+        "id": "semantic_029",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 1065
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 1142,
+        "id": "semantic_030",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 1130
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Push",
+        "end_frame": 1200,
+        "id": "semantic_031",
+        "module_code": "MOD.CONTACT_MOTION",
+        "semantic_status": "single",
+        "start_frame": 1142
+      }
+    ]
+  },
+  {
+    "id": "failure_types__B09_placement_error__01",
+    "title": "Cup placed outside the target position",
+    "task": "place_empty_cup",
+    "case_id": "place_empty_cup/seed_800000064",
+    "category": "failure_types",
+    "group": "Placement error",
+    "instruction": "Carefully place the cup for holding liquids onto the flat round wooden coaster without arm",
+    "video": "assets/place_empty_cup__seed_800000064.mp4",
+    "fps": 30.0,
+    "frame_count": 501,
+    "frames": [
+      {
+        "frame": 72,
+        "caption": "Before / interaction",
+        "image": "assets/case-06-stage-0.png"
+      },
+      {
+        "frame": 89,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-06-stage-1.png"
+      },
+      {
+        "frame": 500,
+        "caption": "Later observation",
+        "image": "assets/case-06-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B09",
+        "name": "Placement position error",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C01",
+        "name": "Position unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 72,
+      "end_frame": 500,
+      "checkpoint_frame": 500,
+      "evidence": "在f72-f81放置阶段，左臂将杯子下放至杯垫边缘偏后位置（f81杯子坐标[-0.0974,-0.1374,0.7505]，杯垫中心为[-0.0973,-0.1737,0.741]），y轴中心偏差约0.035m；f81-f92张开夹爪释放后杯子静止于该偏离位置，杯底明显偏离杯垫中心区域；截至f500检查点杯子位置仍不满足放置目标要求，平台判定任务失败。",
+      "recovery_assessment": {
+        "frames": [
+          81,
+          138,
+          500
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 37,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 50,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 37
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 60,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 50
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 72,
+        "id": "semantic_004",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 60
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 81,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 72
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 92,
+        "id": "semantic_006",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 81
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 138,
+        "id": "semantic_007",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 92
+      }
+    ]
+  },
+  {
+    "id": "failure_types__B09_placement_error__02",
+    "title": "Toy car released at the basket edge",
+    "task": "place_object_basket",
+    "case_id": "place_object_basket/seed_13200270",
+    "category": "failure_types",
+    "group": "Placement error",
+    "instruction": "Lift the toycar made of plastic material, drop it in the oval-shaped basket with woven body, then slightly relocate the oval-shaped basket with woven body.",
+    "video": "assets/place_object_basket__seed_13200270.mp4",
+    "fps": 30.0,
+    "frame_count": 701,
+    "frames": [
+      {
+        "frame": 68,
+        "caption": "Before / interaction",
+        "image": "assets/case-07-stage-0.png"
+      },
+      {
+        "frame": 81,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-07-stage-1.png"
+      },
+      {
+        "frame": 140,
+        "caption": "Later observation",
+        "image": "assets/case-07-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B09",
+        "name": "Placement position error",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C04",
+        "name": "Containment unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 68,
+      "end_frame": 82,
+      "checkpoint_frame": 81,
+      "evidence": "左臂持玩具车至篮子上方释放（F68-F81），释放点偏向篮筐后缘（F71）。释放后小车下落砸中篮筐边缘引起篮子翻倒滑移，小车随之弹开并跌出桌面（F81-F93），小车未能装入篮内。",
+      "recovery_assessment": {
+        "frames": [
+          81,
+          140,
+          700
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 26,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 35,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 26
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 47,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 35
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 68,
+        "id": "semantic_004",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 47
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Drop",
+        "end_frame": 81,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 68
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 113,
+        "id": "semantic_006",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 81
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 155,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 81
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 269,
+        "id": "semantic_008",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 155
+      }
+    ]
+  },
+  {
+    "id": "failure_types__B01_no_target_contact__01",
+    "title": "Hammer misses the block",
+    "task": "beat_block_hammer",
+    "case_id": "beat_block_hammer/seed_800000027",
+    "category": "failure_types",
+    "group": "No target contact",
+    "instruction": "Lift the nail-driving hammer and hit the block",
+    "video": "assets/beat_block_hammer__seed_800000027.mp4",
+    "fps": 30.0,
+    "frame_count": 401,
+    "frames": [
+      {
+        "frame": 64,
+        "caption": "Before / interaction",
+        "image": "assets/case-08-stage-0.png"
+      },
+      {
+        "frame": 76,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-08-stage-1.png"
+      },
+      {
+        "frame": 110,
+        "caption": "Later observation",
+        "image": "assets/case-08-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B01",
+        "name": "No target contact",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C01",
+        "name": "Position unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 64,
+      "end_frame": 400,
+      "checkpoint_frame": 400,
+      "evidence": "在第64-76帧挥锤敲击尝试中，锤头落点偏向木块左侧桌面，未能击中木块；第76帧至第400帧锤头始终落在木块旁桌面上，木块未发生任何位移，敲击接触未建立且最终锤块相对位置误差超标。",
+      "recovery_assessment": {
+        "frames": [
+          76,
+          400
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 31,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 39,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 31
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 45,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 39
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 64,
+        "id": "semantic_004",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 45
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Hammer",
+        "end_frame": 76,
+        "id": "semantic_005",
+        "module_code": "MOD.SURFACE_TOOL",
+        "semantic_status": "single",
+        "start_frame": 64
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Hold",
+        "end_frame": 400,
+        "id": "semantic_006",
+        "module_code": "MOD.HANDOVER_HOLD",
+        "semantic_status": "single",
+        "start_frame": 76
+      }
+    ]
+  },
+  {
+    "id": "failure_types__B01_no_target_contact__02",
+    "title": "Press misses the stapler",
+    "task": "press_stapler",
+    "case_id": "press_stapler/seed_13700128",
+    "category": "failure_types",
+    "group": "No target contact",
+    "instruction": "Push the stapler the plastic stapler with metal on base to activate it.",
+    "video": "assets/press_stapler__seed_13700128.mp4",
+    "fps": 30.0,
+    "frame_count": 401,
+    "frames": [
+      {
+        "frame": 47,
+        "caption": "Before / interaction",
+        "image": "assets/case-09-stage-0.png"
+      },
+      {
+        "frame": 58,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-09-stage-1.png"
+      },
+      {
+        "frame": 88,
+        "caption": "Later observation",
+        "image": "assets/case-09-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B01",
+        "name": "No target contact",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 47,
+      "end_frame": 88,
+      "checkpoint_frame": 88,
+      "evidence": "右臂接近订书机时发生定位偏差，自第47帧起下落按压至订书机左侧空白桌面（如第58、80、88帧所示），末端与订书机全程未建立任何接触，第88帧按压尝试结束，订书机未受压。",
+      "recovery_assessment": {
+        "frames": [
+          88,
+          160,
+          267,
+          400
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 47,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Press",
+        "end_frame": 88,
+        "id": "semantic_002",
+        "module_code": "MOD.CONTROL",
+        "semantic_status": "single",
+        "start_frame": 47
+      }
+    ]
+  },
+  {
+    "id": "failure_types__Other__01",
+    "title": "B08: incorrect placement orientation",
+    "task": "place_fan",
+    "case_id": "place_fan/seed_13000110",
+    "category": "failure_types",
+    "group": "Other: orientation / handover rules",
+    "instruction": "Pick the portable white fan with the left arm, align it to face the robot, and set it on the Yellow mat.",
+    "video": "assets/place_fan__seed_13000110.mp4",
+    "fps": 30.0,
+    "frame_count": 401,
+    "frames": [
+      {
+        "frame": 48,
+        "caption": "Before / interaction",
+        "image": "assets/case-10-stage-0.png"
+      },
+      {
+        "frame": 68,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-10-stage-1.png"
+      },
+      {
+        "frame": 80,
+        "caption": "Later observation",
+        "image": "assets/case-10-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B08",
+        "name": "Placement orientation error",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C03",
+        "name": "Support unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "attempted_not_recovered",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 48,
+      "end_frame": 80,
+      "checkpoint_frame": 78,
+      "evidence": "第48-68帧左臂将风扇下放至黄色垫子表面时，风扇底座保持倾斜姿态，仅底缘接垫而未平稳落座；第68-80帧夹爪在未纠偏的情况下张开释放风扇，风扇随即失去平衡倾倒并横躺在桌面上，未能建立稳定的放置支撑关系。",
+      "recovery_assessment": {
+        "frames": [
+          78,
+          80,
+          107,
+          160,
+          208,
+          275,
+          400
+        ],
+        "status": "attempted_not_recovered"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 26,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 34,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 26
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 48,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 34
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 68,
+        "id": "semantic_004",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 48
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 80,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 68
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 150,
+        "id": "semantic_006",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 80
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 160,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 150
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 168,
+        "id": "semantic_008",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 160
+      }
+    ]
+  },
+  {
+    "id": "failure_types__Other__02",
+    "title": "D02: release before receiver is ready",
+    "task": "handover_mic",
+    "case_id": "handover_mic/seed_1000000022",
+    "category": "failure_types",
+    "group": "Other: orientation / handover rules",
+    "instruction": "Take the small audio microphone, shift it, and release it to the other side.",
+    "video": "assets/handover_mic__seed_1000000022.mp4",
+    "fps": 30.0,
+    "frame_count": 601,
+    "frames": [
+      {
+        "frame": 94,
+        "caption": "Before / interaction",
+        "image": "assets/case-11-stage-0.png"
+      },
+      {
+        "frame": 120,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-11-stage-1.png"
+      },
+      {
+        "frame": 135,
+        "caption": "Later observation",
+        "image": "assets/case-11-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.D02",
+        "name": "Release before receiver ready",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C12",
+        "name": "FAIL.C12",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 94,
+      "end_frame": 135,
+      "checkpoint_frame": 120,
+      "evidence": "在第94-103帧右臂执行闭爪尝试交接抓取，但实测右指关节完全闭合至0.0m，未夹持住麦克风；随后第113-122帧左臂执行开爪释放命令，麦克风在第120-135帧失控下落至桌面，右臂未建立有效承接而左臂已解除抓持，符合FAIL.D02。",
+      "recovery_assessment": {
+        "frames": [
+          135,
+          184,
+          253,
+          320,
+          440,
+          520,
+          585,
+          600
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 21,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 30,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 21
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 46,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 30
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 68,
+        "id": "semantic_004",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 46
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 94,
+        "id": "semantic_005",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 55
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Hold",
+        "end_frame": 113,
+        "id": "semantic_006",
+        "module_code": "MOD.HANDOVER_HOLD",
+        "semantic_status": "single",
+        "start_frame": 68
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 113,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 94
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 122,
+        "id": "semantic_008",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 113
+      }
+    ]
+  },
+  {
+    "id": "failure_results__C11_grasp_unmet__01",
+    "title": "Bottle remains unheld at grasp checkpoint",
+    "task": "pick_diverse_bottles",
+    "case_id": "pick_diverse_bottles/seed_1000000632",
+    "category": "failure_results",
+    "group": "Grasp unmet",
+    "instruction": "Use both arms to grasp the white-capped bottle and the bottle with flat sides and logo together.",
+    "video": "assets/pick_diverse_bottles__seed_1000000632.mp4",
+    "fps": 30.0,
+    "frame_count": 401,
+    "frames": [
+      {
+        "frame": 24,
+        "caption": "Before / interaction",
+        "image": "assets/case-12-stage-0.png"
+      },
+      {
+        "frame": 37,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-12-stage-1.png"
+      },
+      {
+        "frame": 107,
+        "caption": "Later observation",
+        "image": "assets/case-12-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B03",
+        "name": "Grasp not formed",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C11",
+        "name": "Grasp unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 24,
+      "end_frame": 37,
+      "checkpoint_frame": 37,
+      "evidence": "在帧24-37期间，右臂夹爪接近并尝试闭合抓取扁形带logo瓶子（bottle2）。夹爪接触瓶体后物体发生偏移，但右爪完全闭合至0.0m间距（fr_joint7=0.0, fr_joint8=0.0），未能建立有效夹持约束，随后右臂空爪上抬离开，bottle2遗留于桌面并倾倒。",
+      "recovery_assessment": {
+        "frames": [
+          37,
+          107,
+          240,
+          400
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 24,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 24,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 33,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 24
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 37,
+        "id": "semantic_004",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 24
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 53,
+        "id": "semantic_005",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 33
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 64,
+        "id": "semantic_006",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 37
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 62,
+        "id": "semantic_007",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 53
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Hold",
+        "end_frame": 400,
+        "id": "semantic_008",
+        "module_code": "MOD.HANDOVER_HOLD",
+        "semantic_status": "single",
+        "start_frame": 62
+      }
+    ]
+  },
+  {
+    "id": "failure_results__C11_grasp_unmet__02",
+    "title": "Block is unheld at the local checkpoint",
+    "task": "blocks_ranking_size",
+    "case_id": "blocks_ranking_size/seed_30300047",
+    "category": "failure_results",
+    "group": "Grasp unmet",
+    "instruction": "Transfer large block, medium block, small block to the center, aligning from largest to smallest.",
+    "video": "assets/blocks_ranking_size__seed_30300047.mp4",
+    "fps": 30.0,
+    "frame_count": 1201,
+    "frames": [
+      {
+        "frame": 128,
+        "caption": "Before / interaction",
+        "image": "assets/case-13-stage-0.png"
+      },
+      {
+        "frame": 137,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-13-stage-1.png"
+      },
+      {
+        "frame": 160,
+        "caption": "Later observation",
+        "image": "assets/case-13-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B03",
+        "name": "Grasp not formed",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C11",
+        "name": "Grasp unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "recovered",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 128,
+      "end_frame": 197,
+      "checkpoint_frame": 160,
+      "evidence": "左臂在第128-137帧闭合夹爪尝试抓取粉色方块（block2），夹爪触碰方块边缘后完全闭合脱落，第140-160帧夹爪空合抬起，粉色方块仍留在原支撑面。",
+      "recovery_assessment": {
+        "frames": [
+          160,
+          197,
+          240,
+          268
+        ],
+        "status": "recovered"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 27,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 35,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 27
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 46,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 35
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 65,
+        "id": "semantic_004",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 46
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 77,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 65
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 117,
+        "id": "semantic_006",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 77
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 128,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 117
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 140,
+        "id": "semantic_008",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 128
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 190,
+        "id": "semantic_009",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 140
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 202,
+        "id": "semantic_010",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 190
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 234,
+        "id": "semantic_011",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 202
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 243,
+        "id": "semantic_012",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 234
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 251,
+        "id": "semantic_013",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 243
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 265,
+        "id": "semantic_014",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 251
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 276,
+        "id": "semantic_015",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 265
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.ReturnToHome",
+        "end_frame": 309,
+        "id": "semantic_016",
+        "module_code": "MOD.CONTROL_RECOVERY",
+        "semantic_status": "single",
+        "start_frame": 276
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 320,
+        "id": "semantic_017",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 299
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 326,
+        "id": "semantic_018",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 320
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 354,
+        "id": "semantic_019",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 326
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 384,
+        "id": "semantic_020",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 354
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Push",
+        "end_frame": 715,
+        "id": "semantic_021",
+        "module_code": "MOD.CONTACT_MOTION",
+        "semantic_status": "single",
+        "start_frame": 384
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Release",
+        "end_frame": 729,
+        "id": "semantic_022",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 715
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 855,
+        "id": "semantic_023",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 729
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 864,
+        "id": "semantic_024",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 855
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 979,
+        "id": "semantic_025",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 864
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 1004,
+        "id": "semantic_026",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 979
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 1045,
+        "id": "semantic_027",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 1004
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 1065,
+        "id": "semantic_028",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 1045
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 1130,
+        "id": "semantic_029",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 1065
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 1142,
+        "id": "semantic_030",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 1130
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Push",
+        "end_frame": 1200,
+        "id": "semantic_031",
+        "module_code": "MOD.CONTACT_MOTION",
+        "semantic_status": "single",
+        "start_frame": 1142
+      }
+    ]
+  },
+  {
+    "id": "failure_results__C01_position_unmet__01",
+    "title": "Cup remains outside its target position",
+    "task": "place_empty_cup",
+    "case_id": "place_empty_cup/seed_800000064",
+    "category": "failure_results",
+    "group": "Position unmet",
+    "instruction": "Carefully place the cup for holding liquids onto the flat round wooden coaster without arm",
+    "video": "assets/place_empty_cup__seed_800000064.mp4",
+    "fps": 30.0,
+    "frame_count": 501,
+    "frames": [
+      {
+        "frame": 72,
+        "caption": "Before / interaction",
+        "image": "assets/case-14-stage-0.png"
+      },
+      {
+        "frame": 89,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-14-stage-1.png"
+      },
+      {
+        "frame": 500,
+        "caption": "Later observation",
+        "image": "assets/case-14-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B09",
+        "name": "Placement position error",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C01",
+        "name": "Position unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 72,
+      "end_frame": 500,
+      "checkpoint_frame": 500,
+      "evidence": "在f72-f81放置阶段，左臂将杯子下放至杯垫边缘偏后位置（f81杯子坐标[-0.0974,-0.1374,0.7505]，杯垫中心为[-0.0973,-0.1737,0.741]），y轴中心偏差约0.035m；f81-f92张开夹爪释放后杯子静止于该偏离位置，杯底明显偏离杯垫中心区域；截至f500检查点杯子位置仍不满足放置目标要求，平台判定任务失败。",
+      "recovery_assessment": {
+        "frames": [
+          81,
+          138,
+          500
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 37,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 50,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 37
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 60,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 50
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 72,
+        "id": "semantic_004",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 60
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 81,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 72
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 92,
+        "id": "semantic_006",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 81
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 138,
+        "id": "semantic_007",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 92
+      }
+    ]
+  },
+  {
+    "id": "failure_results__C01_position_unmet__02",
+    "title": "Fan target position remains unmet",
+    "task": "place_fan",
+    "case_id": "place_fan/seed_1000000047",
+    "category": "failure_results",
+    "group": "Position unmet",
+    "instruction": "Place the small fan on the Turquoise mat after grabbing it with the right arm and align it toward the robot.",
+    "video": "assets/place_fan__seed_1000000047.mp4",
+    "fps": 30.0,
+    "frame_count": 401,
+    "frames": [
+      {
+        "frame": 53,
+        "caption": "Before / interaction",
+        "image": "assets/case-15-stage-0.png"
+      },
+      {
+        "frame": 266,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-15-stage-1.png"
+      },
+      {
+        "frame": 400,
+        "caption": "Later observation",
+        "image": "assets/case-15-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B09",
+        "name": "Placement position error",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C01",
+        "name": "Position unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "attempted_not_recovered",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 49,
+      "end_frame": 400,
+      "checkpoint_frame": 400,
+      "evidence": "在第49-53帧初次放置时，风扇被释放在绿松石色垫子边缘外侧（风扇y=-0.170m，垫子中心y=-0.135m）；机械臂随后在第75-266帧重新接近并抓取风扇尝试调整，但在第322-330帧于空中打开夹爪导致风扇坠落倒伏，至第400帧终态风扇仍位于垫子外侧（y=-0.177m），放置位置未达成。",
+      "recovery_assessment": {
+        "frames": [
+          53,
+          75,
+          266,
+          320,
+          330,
+          400
+        ],
+        "status": "attempted_not_recovered"
+      }
+    },
+    "segments": [
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 26,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 34,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 26
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 49,
+        "id": "semantic_003",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 34
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Place",
+        "end_frame": 65,
+        "id": "semantic_004",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 49
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 257,
+        "id": "semantic_005",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 75
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 278,
+        "id": "semantic_006",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 257
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 322,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 278
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Drop",
+        "end_frame": 330,
+        "id": "semantic_008",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 322
+      }
+    ]
+  },
+  {
+    "id": "failure_results__C03_support_unmet__01",
+    "title": "Fan fails to stand on the support",
+    "task": "place_fan",
+    "case_id": "place_fan/seed_13000110",
+    "category": "failure_results",
+    "group": "Support unmet",
+    "instruction": "Pick the portable white fan with the left arm, align it to face the robot, and set it on the Yellow mat.",
+    "video": "assets/place_fan__seed_13000110.mp4",
+    "fps": 30.0,
+    "frame_count": 401,
+    "frames": [
+      {
+        "frame": 48,
+        "caption": "Before / interaction",
+        "image": "assets/case-16-stage-0.png"
+      },
+      {
+        "frame": 80,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-16-stage-1.png"
+      },
+      {
+        "frame": 400,
+        "caption": "Later observation",
+        "image": "assets/case-16-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B08",
+        "name": "Placement orientation error",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C03",
+        "name": "Support unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "attempted_not_recovered",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 48,
+      "end_frame": 80,
+      "checkpoint_frame": 78,
+      "evidence": "第48-68帧左臂将风扇下放至黄色垫子表面时，风扇底座保持倾斜姿态，仅底缘接垫而未平稳落座；第68-80帧夹爪在未纠偏的情况下张开释放风扇，风扇随即失去平衡倾倒并横躺在桌面上，未能建立稳定的放置支撑关系。",
+      "recovery_assessment": {
+        "frames": [
+          78,
+          80,
+          107,
+          160,
+          208,
+          275,
+          400
+        ],
+        "status": "attempted_not_recovered"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 26,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 34,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 26
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 48,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 34
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 68,
+        "id": "semantic_004",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 48
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 80,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 68
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 150,
+        "id": "semantic_006",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 80
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 160,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 150
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 168,
+        "id": "semantic_008",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 160
+      }
+    ]
+  },
+  {
+    "id": "failure_results__C03_support_unmet__02",
+    "title": "Bowl placement fails to establish stack support",
+    "task": "stack_bowls_three",
+    "case_id": "stack_bowls_three/seed_1000000032",
+    "category": "failure_results",
+    "group": "Support unmet",
+    "instruction": "Stack the small bowl with brown edge by arranging them sequentially.",
+    "video": "assets/stack_bowls_three__seed_1000000032.mp4",
+    "fps": 30.0,
+    "frame_count": 1201,
+    "frames": [
+      {
+        "frame": 230,
+        "caption": "Before / interaction",
+        "image": "assets/case-17-stage-0.png"
+      },
+      {
+        "frame": 240,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-17-stage-1.png"
+      },
+      {
+        "frame": 255,
+        "caption": "Later observation",
+        "image": "assets/case-17-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B08",
+        "name": "Placement orientation error",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C03",
+        "name": "Support unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "attempted_not_recovered",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 230,
+      "end_frame": 255,
+      "checkpoint_frame": 247,
+      "evidence": "第234-240帧右臂搬运第三个碗尝试放置在已叠放的碗上时，碗身姿态严重倾斜未调正，底缘抵撞承接碗口，释放过程中导致既有碗塔失稳翻倒，第三个碗侧滑跌落桌外，未达成稳定层间堆叠支撑。",
+      "recovery_assessment": {
+        "frames": [
+          247,
+          308,
+          352,
+          1200
+        ],
+        "status": "attempted_not_recovered"
+      }
+    },
+    "segments": [
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 27,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 42,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 27
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 68,
+        "id": "semantic_003",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 42
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 120,
+        "id": "semantic_004",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 61
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Place",
+        "end_frame": 77,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 68
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 109,
+        "id": "semantic_006",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 77
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 137,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 120
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 151,
+        "id": "semantic_008",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 137
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 162,
+        "id": "semantic_009",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 151
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 200,
+        "id": "semantic_010",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 162
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 204,
+        "id": "semantic_011",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 171
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 221,
+        "id": "semantic_012",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 204
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 238,
+        "id": "semantic_013",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 221
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Place",
+        "end_frame": 250,
+        "id": "semantic_014",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 238
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 282,
+        "id": "semantic_015",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 250
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 300,
+        "id": "semantic_016",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 264
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 316,
+        "id": "semantic_017",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 300
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 356,
+        "id": "semantic_018",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 316
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 345,
+        "id": "semantic_019",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 328
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 353,
+        "id": "semantic_020",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 345
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 392,
+        "id": "semantic_021",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 353
+      }
+    ]
+  },
+  {
+    "id": "failure_results__C04_containment__01",
+    "title": "Can is expelled from the container",
+    "task": "place_cans_plasticbox",
+    "case_id": "place_cans_plasticbox/seed_72600075",
+    "category": "failure_results",
+    "group": "Containment",
+    "instruction": "Using dual arms, place the green red metallic soda can and the beverage can with red green graphics inside the rectangular storage box with grooves",
+    "video": "assets/place_cans_plasticbox__seed_72600075.mp4",
+    "fps": 30.0,
+    "frame_count": 801,
+    "frames": [
+      {
+        "frame": 91,
+        "caption": "Before / interaction",
+        "image": "assets/case-18-stage-0.png"
+      },
+      {
+        "frame": 107,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-18-stage-1.png"
+      },
+      {
+        "frame": 160,
+        "caption": "Later observation",
+        "image": "assets/case-18-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B10",
+        "name": "Contact disturbance",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C04",
+        "name": "Containment unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_002",
+      "start_frame": 91,
+      "end_frame": 160,
+      "checkpoint_frame": 107,
+      "evidence": "右臂将右侧罐子（object2）释放入收纳盒后进行撤离平移，末端夹爪在移动中与蓝色塑料盒边缘发生机械挂碰与干涉，导致塑料盒被大幅挑起倾覆，已放置的object2被甩出盒体并翻滚跌落至桌面外地面，终态未能保持在收纳盒内部。",
+      "recovery_assessment": {
+        "frames": [
+          107,
+          160
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 28,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 28,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 41,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 28
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 41,
+        "id": "semantic_004",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 28
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 51,
+        "id": "semantic_005",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 41
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 68,
+        "id": "semantic_006",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 41
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 78,
+        "id": "semantic_007",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 51
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Release",
+        "end_frame": 91,
+        "id": "semantic_008",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 78
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 223,
+        "id": "semantic_009",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 91
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Retry",
+        "end_frame": 576,
+        "id": "semantic_010",
+        "module_code": "MOD.CONTROL_RECOVERY",
+        "semantic_status": "single",
+        "start_frame": 223
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 800,
+        "id": "semantic_011",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 576
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 800,
+        "id": "semantic_012",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 584
+      }
+    ]
+  },
+  {
+    "id": "failure_results__C04_containment__02",
+    "title": "Shoe protrudes from the box",
+    "task": "place_dual_shoes",
+    "case_id": "place_dual_shoes/seed_1000001696",
+    "category": "failure_results",
+    "group": "Containment",
+    "instruction": "Arrange the two the white shoe with rounded toe, tips left, inside the orange shoe-box.",
+    "video": "assets/place_dual_shoes__seed_1000001696.mp4",
+    "fps": 30.0,
+    "frame_count": 601,
+    "frames": [
+      {
+        "frame": 175,
+        "caption": "Before / interaction",
+        "image": "assets/case-19-stage-0.png"
+      },
+      {
+        "frame": 184,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-19-stage-1.png"
+      },
+      {
+        "frame": 600,
+        "caption": "Later observation",
+        "image": "assets/case-19-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B08",
+        "name": "Placement orientation error",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C02",
+        "name": "Orientation unmet",
+        "status": "candidate"
+      },
+      {
+        "code": "FAIL.C04",
+        "name": "Containment unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 175,
+      "end_frame": 600,
+      "checkpoint_frame": 600,
+      "evidence": "右臂将右鞋放置入鞋盒时，未将鞋头旋转至朝左方向，且下放姿态严重前倾斜，直接落座在已放置的左鞋上方，松爪后右鞋呈倾斜搭接状态，鞋头露出盒外，未达成朝向要求和盒内包含条件。",
+      "recovery_assessment": {
+        "frames": [
+          184,
+          600
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 34,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 38,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 53,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 34
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 50,
+        "id": "semantic_004",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 38
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 61,
+        "id": "semantic_005",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 50
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 62,
+        "id": "semantic_006",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 53
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 77,
+        "id": "semantic_007",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 61
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Hold",
+        "end_frame": 154,
+        "id": "semantic_008",
+        "module_code": "MOD.HANDOVER_HOLD",
+        "semantic_status": "single",
+        "start_frame": 62
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Rotate",
+        "end_frame": 85,
+        "id": "semantic_009",
+        "module_code": "MOD.ROTATION",
+        "semantic_status": "single",
+        "start_frame": 77
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 103,
+        "id": "semantic_010",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 85
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 135,
+        "id": "semantic_011",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 103
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.ReturnToHome",
+        "end_frame": 174,
+        "id": "semantic_012",
+        "module_code": "MOD.CONTROL_RECOVERY",
+        "semantic_status": "single",
+        "start_frame": 135
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 175,
+        "id": "semantic_013",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 154
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Place",
+        "end_frame": 184,
+        "id": "semantic_014",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 175
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Release",
+        "end_frame": 194,
+        "id": "semantic_015",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 184
+      }
+    ]
+  },
+  {
+    "id": "failure_results__C05_mechanism__01",
+    "title": "Microwave door opening condition is unmet",
+    "task": "open_microwave",
+    "case_id": "open_microwave/seed_31700203",
+    "category": "failure_results",
+    "group": "Mechanism",
+    "instruction": "Pull the door to open the gray microwave.",
+    "video": "assets/open_microwave__seed_31700203.mp4",
+    "fps": 30.0,
+    "frame_count": 1501,
+    "frames": [
+      {
+        "frame": 116,
+        "caption": "Early failure",
+        "image": "assets/case-20-stage-0.png"
+      },
+      {
+        "frame": 411,
+        "caption": "Transient opening",
+        "image": "assets/case-20-stage-1.png"
+      },
+      {
+        "frame": 1500,
+        "caption": "Mechanism unmet",
+        "image": "assets/case-20-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B04",
+        "name": "Grasp slip / loss",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C05",
+        "name": "Mechanism state unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "attempted_not_recovered",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 36,
+      "end_frame": 1500,
+      "checkpoint_frame": 1500,
+      "evidence": "左臂在第36-116帧拉动门把手时把手滑脱，未能拉开炉门（FAIL.B04）；第400-415帧再次钩拉虽使门短暂展开，但脱手后炉门于第449帧前完全回闭；右臂于第724-831帧接触推压未果，至第1500帧终态检查点微波炉门开合度仅为0.094，未达到成功阈值（FAIL.C05）。",
+      "recovery_assessment": {
+        "frames": [
+          116,
+          300,
+          411,
+          449,
+          800,
+          1500
+        ],
+        "status": "attempted_not_recovered"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 24,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 36,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 24
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Open",
+        "end_frame": 116,
+        "id": "semantic_003",
+        "module_code": "MOD.ARTICULATION",
+        "semantic_status": "single",
+        "start_frame": 36
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 261,
+        "id": "semantic_004",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 116
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 400,
+        "id": "semantic_005",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 261
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Open",
+        "end_frame": 415,
+        "id": "semantic_006",
+        "module_code": "MOD.ARTICULATION",
+        "semantic_status": "single",
+        "start_frame": 400
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 630,
+        "id": "semantic_007",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 415
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 724,
+        "id": "semantic_008",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 631
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Push",
+        "end_frame": 831,
+        "id": "semantic_009",
+        "module_code": "MOD.CONTACT_MOTION",
+        "semantic_status": "single",
+        "start_frame": 724
+      }
+    ]
+  },
+  {
+    "id": "failure_results__C05_mechanism__02",
+    "title": "Laptop lid remains closed",
+    "task": "open_laptop",
+    "case_id": "open_laptop/seed_1000000143",
+    "category": "failure_results",
+    "group": "Mechanism",
+    "instruction": "Gently open the smooth textured laptop upward.",
+    "video": "assets/open_laptop__seed_1000000143.mp4",
+    "fps": 30.0,
+    "frame_count": 701,
+    "frames": [
+      {
+        "frame": 22,
+        "caption": "Before / interaction",
+        "image": "assets/case-21-stage-0.png"
+      },
+      {
+        "frame": 52,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-21-stage-1.png"
+      },
+      {
+        "frame": 700,
+        "caption": "Later observation",
+        "image": "assets/case-21-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B03",
+        "name": "Grasp not formed",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C05",
+        "name": "Mechanism state unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 22,
+      "end_frame": 700,
+      "checkpoint_frame": 700,
+      "evidence": "左臂于F22-F24接近笔记本前侧边缘并执行夹爪闭合尝试夹取屏盖，但未能在屏盖上建立有效约束，F36夹爪间距归零空夹；随后左臂移开并在空中悬停，笔记本屏盖全程未被掀开，截至终态F700铰链仍处于未打开状态。",
+      "recovery_assessment": {
+        "frames": [
+          36,
+          52,
+          140,
+          700
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 24,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Pinch",
+        "end_frame": 36,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 24
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 52,
+        "id": "semantic_003",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 36
+      }
+    ]
+  },
+  {
+    "id": "failure_results__Other__01",
+    "title": "C02: bottle orientation remains incorrect",
+    "task": "move_pillbottle_pad",
+    "case_id": "move_pillbottle_pad/seed_31300091",
+    "category": "failure_results",
+    "group": "Other: orientation outcomes",
+    "instruction": "Grab the compact bottle with teal and white design carefully and drop it on pad",
+    "video": "assets/move_pillbottle_pad__seed_31300091.mp4",
+    "fps": 30.0,
+    "frame_count": 401,
+    "frames": [
+      {
+        "frame": 67,
+        "caption": "Before / interaction",
+        "image": "assets/case-22-stage-0.png"
+      },
+      {
+        "frame": 93,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-22-stage-1.png"
+      },
+      {
+        "frame": 400,
+        "caption": "Later observation",
+        "image": "assets/case-22-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B08",
+        "name": "Placement orientation error",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C02",
+        "name": "Orientation unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "attempted_not_recovered",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 67,
+      "end_frame": 93,
+      "checkpoint_frame": 93,
+      "evidence": "左臂在第67-80帧将药瓶向下放置时，药瓶相对垫面保持倾斜姿态，底部未平稳落座即在第80-87帧开爪释放，导致药瓶在第90-93帧倾倒在台面上，未能达成竖直稳定放置目标。",
+      "recovery_assessment": {
+        "frames": [
+          80,
+          107,
+          133,
+          160,
+          400
+        ],
+        "status": "attempted_not_recovered"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 26,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 33,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 26
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 45,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 33
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 67,
+        "id": "semantic_004",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 45
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 80,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 67
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 87,
+        "id": "semantic_006",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 80
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 108,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 98
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 119,
+        "id": "semantic_008",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 108
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 133,
+        "id": "semantic_009",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 119
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 147,
+        "id": "semantic_010",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 133
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 151,
+        "id": "semantic_011",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 147
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 157,
+        "id": "semantic_012",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 151
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 178,
+        "id": "semantic_013",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 157
+      }
+    ]
+  },
+  {
+    "id": "failure_results__Other__02",
+    "title": "C02: mouse orientation remains incorrect",
+    "task": "place_mouse_pad",
+    "case_id": "place_mouse_pad/seed_800000151",
+    "category": "failure_results",
+    "group": "Other: orientation outcomes",
+    "instruction": "Take the mouse with ergonomic design and place it on the Green mat.",
+    "video": "assets/place_mouse_pad__seed_800000151.mp4",
+    "fps": 30.0,
+    "frame_count": 401,
+    "frames": [
+      {
+        "frame": 48,
+        "caption": "Before / interaction",
+        "image": "assets/case-23-stage-0.png"
+      },
+      {
+        "frame": 75,
+        "caption": "Failure / checkpoint",
+        "image": "assets/case-23-stage-1.png"
+      },
+      {
+        "frame": 400,
+        "caption": "Later observation",
+        "image": "assets/case-23-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B08",
+        "name": "Placement orientation error",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C02",
+        "name": "Orientation unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 48,
+      "end_frame": 400,
+      "checkpoint_frame": 400,
+      "evidence": "F48-F68下放过程中末端大幅翻转偏斜，鼠标底面与绿色垫面呈明显夹角；F68接触垫面时仅侧缘着地，F75夹爪松开后鼠标侧立在垫上未能正常平稳落座，终态姿态不达标。",
+      "recovery_assessment": {
+        "frames": [
+          75,
+          178,
+          400
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 20,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 29,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 20
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 48,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 29
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Place",
+        "end_frame": 68,
+        "id": "semantic_004",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 48
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Release",
+        "end_frame": 75,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 68
+      }
+    ]
+  },
+  {
+    "id": "recovery_states__recovered__01",
+    "title": "Handle slip followed by successful opening",
+    "task": "open_microwave",
+    "case_id": "open_microwave/seed_1000000160",
+    "category": "recovery_states",
+    "group": "Recovered",
+    "instruction": "Pull open the door of the countertop microwave using the left arm.",
+    "video": "assets/open_microwave__seed_1000000160.mp4",
+    "fps": 30.0,
+    "frame_count": 1076,
+    "frames": [
+      {
+        "frame": 143,
+        "caption": "Failure",
+        "image": "assets/case-24-stage-0.png"
+      },
+      {
+        "frame": 893,
+        "caption": "Corrective attempt",
+        "image": "assets/case-24-stage-1.png"
+      },
+      {
+        "frame": 1075,
+        "caption": "Recovered",
+        "image": "assets/case-24-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B04",
+        "name": "Grasp slip / loss",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C11",
+        "name": "Grasp unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "recovered",
+    "terminal_success": 1,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 104,
+      "end_frame": 143,
+      "checkpoint_frame": 139,
+      "evidence": "左夹爪在拉门过程中（门开度曾达0.135），于第104至139帧把手脱离夹爪，夹爪完全闭合（指间距为0），门回弹至0.066，拉门动作中断。",
+      "recovery_assessment": {
+        "frames": [
+          139,
+          865,
+          932,
+          1075
+        ],
+        "status": "recovered"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 21,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 34,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 21
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Open",
+        "end_frame": 139,
+        "id": "semantic_003",
+        "module_code": "MOD.ARTICULATION",
+        "semantic_status": "single",
+        "start_frame": 34
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 894,
+        "id": "semantic_004",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 865
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Open",
+        "end_frame": 1075,
+        "id": "semantic_005",
+        "module_code": "MOD.ARTICULATION",
+        "semantic_status": "single",
+        "start_frame": 894
+      }
+    ]
+  },
+  {
+    "id": "recovery_states__recovered__02",
+    "title": "Failed block grasp followed by a successful regrasp",
+    "task": "blocks_ranking_size",
+    "case_id": "blocks_ranking_size/seed_30300047",
+    "category": "recovery_states",
+    "group": "Recovered",
+    "instruction": "Transfer large block, medium block, small block to the center, aligning from largest to smallest.",
+    "video": "assets/blocks_ranking_size__seed_30300047.mp4",
+    "fps": 30.0,
+    "frame_count": 1201,
+    "frames": [
+      {
+        "frame": 160,
+        "caption": "Failure",
+        "image": "assets/case-25-stage-0.png"
+      },
+      {
+        "frame": 240,
+        "caption": "Corrective attempt",
+        "image": "assets/case-25-stage-1.png"
+      },
+      {
+        "frame": 268,
+        "caption": "Grasp recovered; task later fails",
+        "image": "assets/case-25-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B03",
+        "name": "Grasp not formed",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C11",
+        "name": "Grasp unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "recovered",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 128,
+      "end_frame": 197,
+      "checkpoint_frame": 160,
+      "evidence": "左臂在第128-137帧闭合夹爪尝试抓取粉色方块（block2），夹爪触碰方块边缘后完全闭合脱落，第140-160帧夹爪空合抬起，粉色方块仍留在原支撑面。",
+      "recovery_assessment": {
+        "frames": [
+          160,
+          197,
+          240,
+          268
+        ],
+        "status": "recovered"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 27,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 35,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 27
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 46,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 35
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 65,
+        "id": "semantic_004",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 46
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 77,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 65
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 117,
+        "id": "semantic_006",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 77
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 128,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 117
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 140,
+        "id": "semantic_008",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 128
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 190,
+        "id": "semantic_009",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 140
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 202,
+        "id": "semantic_010",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 190
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 234,
+        "id": "semantic_011",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 202
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 243,
+        "id": "semantic_012",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 234
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 251,
+        "id": "semantic_013",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 243
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 265,
+        "id": "semantic_014",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 251
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 276,
+        "id": "semantic_015",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 265
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.ReturnToHome",
+        "end_frame": 309,
+        "id": "semantic_016",
+        "module_code": "MOD.CONTROL_RECOVERY",
+        "semantic_status": "single",
+        "start_frame": 276
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 320,
+        "id": "semantic_017",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 299
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 326,
+        "id": "semantic_018",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 320
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 354,
+        "id": "semantic_019",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 326
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 384,
+        "id": "semantic_020",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 354
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Push",
+        "end_frame": 715,
+        "id": "semantic_021",
+        "module_code": "MOD.CONTACT_MOTION",
+        "semantic_status": "single",
+        "start_frame": 384
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Release",
+        "end_frame": 729,
+        "id": "semantic_022",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 715
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 855,
+        "id": "semantic_023",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 729
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 864,
+        "id": "semantic_024",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 855
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 979,
+        "id": "semantic_025",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 864
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 1004,
+        "id": "semantic_026",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 979
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 1045,
+        "id": "semantic_027",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 1004
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 1065,
+        "id": "semantic_028",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 1045
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Move",
+        "end_frame": 1130,
+        "id": "semantic_029",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 1065
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 1142,
+        "id": "semantic_030",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 1130
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Push",
+        "end_frame": 1200,
+        "id": "semantic_031",
+        "module_code": "MOD.CONTACT_MOTION",
+        "semantic_status": "single",
+        "start_frame": 1142
+      }
+    ]
+  },
+  {
+    "id": "recovery_states__attempted_not_recovered__01",
+    "title": "Fan falls; regrasp attempts fail",
+    "task": "place_fan",
+    "case_id": "place_fan/seed_13000110",
+    "category": "recovery_states",
+    "group": "Attempted, not recovered",
+    "instruction": "Pick the portable white fan with the left arm, align it to face the robot, and set it on the Yellow mat.",
+    "video": "assets/place_fan__seed_13000110.mp4",
+    "fps": 30.0,
+    "frame_count": 401,
+    "frames": [
+      {
+        "frame": 80,
+        "caption": "Failure",
+        "image": "assets/case-26-stage-0.png"
+      },
+      {
+        "frame": 133,
+        "caption": "Corrective attempt",
+        "image": "assets/case-26-stage-1.png"
+      },
+      {
+        "frame": 400,
+        "caption": "Still failed",
+        "image": "assets/case-26-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B08",
+        "name": "Placement orientation error",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C03",
+        "name": "Support unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "attempted_not_recovered",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 48,
+      "end_frame": 80,
+      "checkpoint_frame": 78,
+      "evidence": "第48-68帧左臂将风扇下放至黄色垫子表面时，风扇底座保持倾斜姿态，仅底缘接垫而未平稳落座；第68-80帧夹爪在未纠偏的情况下张开释放风扇，风扇随即失去平衡倾倒并横躺在桌面上，未能建立稳定的放置支撑关系。",
+      "recovery_assessment": {
+        "frames": [
+          78,
+          80,
+          107,
+          160,
+          208,
+          275,
+          400
+        ],
+        "status": "attempted_not_recovered"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 26,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 34,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 26
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 48,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 34
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 68,
+        "id": "semantic_004",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 48
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 80,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 68
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 150,
+        "id": "semantic_006",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 80
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 160,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 150
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 168,
+        "id": "semantic_008",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 160
+      }
+    ]
+  },
+  {
+    "id": "recovery_states__attempted_not_recovered__02",
+    "title": "Bottle falls; upright placement is not restored",
+    "task": "move_pillbottle_pad",
+    "case_id": "move_pillbottle_pad/seed_31300091",
+    "category": "recovery_states",
+    "group": "Attempted, not recovered",
+    "instruction": "Grab the compact bottle with teal and white design carefully and drop it on pad",
+    "video": "assets/move_pillbottle_pad__seed_31300091.mp4",
+    "fps": 30.0,
+    "frame_count": 401,
+    "frames": [
+      {
+        "frame": 93,
+        "caption": "Failure",
+        "image": "assets/case-27-stage-0.png"
+      },
+      {
+        "frame": 133,
+        "caption": "Corrective attempt",
+        "image": "assets/case-27-stage-1.png"
+      },
+      {
+        "frame": 400,
+        "caption": "Still failed",
+        "image": "assets/case-27-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B08",
+        "name": "Placement orientation error",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C02",
+        "name": "Orientation unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "attempted_not_recovered",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 67,
+      "end_frame": 93,
+      "checkpoint_frame": 93,
+      "evidence": "左臂在第67-80帧将药瓶向下放置时，药瓶相对垫面保持倾斜姿态，底部未平稳落座即在第80-87帧开爪释放，导致药瓶在第90-93帧倾倒在台面上，未能达成竖直稳定放置目标。",
+      "recovery_assessment": {
+        "frames": [
+          80,
+          107,
+          133,
+          160,
+          400
+        ],
+        "status": "attempted_not_recovered"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 26,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 33,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 26
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 45,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 33
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 67,
+        "id": "semantic_004",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 45
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 80,
+        "id": "semantic_005",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 67
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 87,
+        "id": "semantic_006",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 80
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 108,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 98
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 119,
+        "id": "semantic_008",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 108
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 133,
+        "id": "semantic_009",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 119
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 147,
+        "id": "semantic_010",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 133
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Place",
+        "end_frame": 151,
+        "id": "semantic_011",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 147
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 157,
+        "id": "semantic_012",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 151
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 178,
+        "id": "semantic_013",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 157
+      }
+    ]
+  },
+  {
+    "id": "recovery_states__not_recovered_as_of_checkpoint__01",
+    "title": "Dropped microphone receives no corrective regrasp",
+    "task": "handover_mic",
+    "case_id": "handover_mic/seed_1000000022",
+    "category": "recovery_states",
+    "group": "Not recovered as of checkpoint",
+    "instruction": "Take the small audio microphone, shift it, and release it to the other side.",
+    "video": "assets/handover_mic__seed_1000000022.mp4",
+    "fps": 30.0,
+    "frame_count": 601,
+    "frames": [
+      {
+        "frame": 135,
+        "caption": "Failure",
+        "image": "assets/case-28-stage-0.png"
+      },
+      {
+        "frame": 320,
+        "caption": "Later observation",
+        "image": "assets/case-28-stage-1.png"
+      },
+      {
+        "frame": 600,
+        "caption": "Unresolved at checkpoint",
+        "image": "assets/case-28-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.D02",
+        "name": "Release before receiver ready",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C12",
+        "name": "FAIL.C12",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 23,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 94,
+      "end_frame": 135,
+      "checkpoint_frame": 120,
+      "evidence": "在第94-103帧右臂执行闭爪尝试交接抓取，但实测右指关节完全闭合至0.0m，未夹持住麦克风；随后第113-122帧左臂执行开爪释放命令，麦克风在第120-135帧失控下落至桌面，右臂未建立有效承接而左臂已解除抓持，符合FAIL.D02。",
+      "recovery_assessment": {
+        "frames": [
+          135,
+          184,
+          253,
+          320,
+          440,
+          520,
+          585,
+          600
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 21,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 30,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 21
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Lift",
+        "end_frame": 46,
+        "id": "semantic_003",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 30
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Carry",
+        "end_frame": 68,
+        "id": "semantic_004",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 46
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 94,
+        "id": "semantic_005",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 55
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Hold",
+        "end_frame": 113,
+        "id": "semantic_006",
+        "module_code": "MOD.HANDOVER_HOLD",
+        "semantic_status": "single",
+        "start_frame": 68
+      },
+      {
+        "arm": "right",
+        "atom_code": "ATOM.Grasp",
+        "end_frame": 113,
+        "id": "semantic_007",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 94
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Release",
+        "end_frame": 122,
+        "id": "semantic_008",
+        "module_code": "MOD.RELEASE",
+        "semantic_status": "single",
+        "start_frame": 113
+      }
+    ]
+  },
+  {
+    "id": "recovery_states__not_recovered_as_of_checkpoint__02",
+    "title": "Failed lid grasp receives no corrective retry",
+    "task": "open_laptop",
+    "case_id": "open_laptop/seed_1000000143",
+    "category": "recovery_states",
+    "group": "Not recovered as of checkpoint",
+    "instruction": "Gently open the smooth textured laptop upward.",
+    "video": "assets/open_laptop__seed_1000000143.mp4",
+    "fps": 30.0,
+    "frame_count": 701,
+    "frames": [
+      {
+        "frame": 36,
+        "caption": "Failure",
+        "image": "assets/case-29-stage-0.png"
+      },
+      {
+        "frame": 140,
+        "caption": "Later observation",
+        "image": "assets/case-29-stage-1.png"
+      },
+      {
+        "frame": 700,
+        "caption": "Unresolved at checkpoint",
+        "image": "assets/case-29-stage-2.png"
+      }
+    ],
+    "type_labels": [
+      {
+        "code": "FAIL.B03",
+        "name": "Grasp not formed",
+        "status": "candidate"
+      }
+    ],
+    "outcome_labels": [
+      {
+        "code": "FAIL.C05",
+        "name": "Mechanism state unmet",
+        "status": "candidate"
+      }
+    ],
+    "recovery": "not_recovered_as_of_checkpoint",
+    "terminal_success": 0,
+    "annotation_status": "draft",
+    "taxonomy_revision": 22,
+    "event": {
+      "id": "failure_001",
+      "start_frame": 22,
+      "end_frame": 700,
+      "checkpoint_frame": 700,
+      "evidence": "左臂于F22-F24接近笔记本前侧边缘并执行夹爪闭合尝试夹取屏盖，但未能在屏盖上建立有效约束，F36夹爪间距归零空夹；随后左臂移开并在空中悬停，笔记本屏盖全程未被掀开，截至终态F700铰链仍处于未打开状态。",
+      "recovery_assessment": {
+        "frames": [
+          36,
+          52,
+          140,
+          700
+        ],
+        "status": "not_recovered_as_of_checkpoint"
+      }
+    },
+    "segments": [
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Reach",
+        "end_frame": 24,
+        "id": "semantic_001",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 0
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Pinch",
+        "end_frame": 36,
+        "id": "semantic_002",
+        "module_code": "MOD.ACQUIRE",
+        "semantic_status": "single",
+        "start_frame": 24
+      },
+      {
+        "arm": "left",
+        "atom_code": "ATOM.Move",
+        "end_frame": 52,
+        "id": "semantic_003",
+        "module_code": "MOD.TRANSPORT",
+        "semantic_status": "single",
+        "start_frame": 36
+      }
+    ]
+  }
+]

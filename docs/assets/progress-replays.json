@@ -1,0 +1,271 @@
+{
+  "source": "Manuscript qualitative progress comparison, Figure 4",
+  "notes": [
+    "Precomputed scores from the paper, not live inference.",
+    "Markers are the 16 saved scored frames; lines only join adjacent saved samples.",
+    "The cursor follows the original video frame. Numeric scores hold the most recent saved sample.",
+    "Reference A is the saved physical-progress annotation; the terminal label is recorded separately.",
+    "RoboReward-8B uses the paper comparison mapping (native score - 1) / 4.",
+    "Encoded playback time is not physical robot execution time."
+  ],
+  "cases": [
+    {
+      "id": "scored-lift_pot",
+      "case_id": "lift_pot/seed_1000000264",
+      "title": "Lift the pot",
+      "outcome": "Grip loss",
+      "terminal_success": 0,
+      "instruction": "Pick up the gray cylindrical metal kitchenpot with careful lifting",
+      "source_video": "scored-lift_pot-source.mp4",
+      "source_sha256": "e46a24f6230f2049fc6584c0383d626cf94eb24ec52db0c3e097a10794921b62",
+      "fps": 30.0,
+      "frame_count": 401,
+      "replay_seconds": 16,
+      "replay": "scored-lift_pot-replay.mp4",
+      "poster": "scored-lift_pot-poster.jpg",
+      "samples": [
+        {
+          "frame": 0,
+          "reference": 0.0,
+          "joint": 0.0027149852830916643,
+          "densereward": 0.0,
+          "roboreward": 0.0
+        },
+        {
+          "frame": 27,
+          "reference": 0.0,
+          "joint": 0.004905405919998884,
+          "densereward": 0.33,
+          "roboreward": 0.0
+        },
+        {
+          "frame": 53,
+          "reference": 0.5,
+          "joint": 0.6006569266319275,
+          "densereward": 0.27,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 80,
+          "reference": 1.0,
+          "joint": 0.9136765599250793,
+          "densereward": 0.36,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 107,
+          "reference": 1.0,
+          "joint": 0.8615382313728333,
+          "densereward": 0.62,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 133,
+          "reference": 0.25,
+          "joint": 0.854884684085846,
+          "densereward": 0.779,
+          "roboreward": 0.5
+        },
+        {
+          "frame": 160,
+          "reference": 0.25,
+          "joint": 0.2133771777153015,
+          "densereward": 0.27,
+          "roboreward": 0.5
+        },
+        {
+          "frame": 187,
+          "reference": 0.25,
+          "joint": 0.30404165387153625,
+          "densereward": 0.24,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 213,
+          "reference": 0.25,
+          "joint": 0.2798284888267517,
+          "densereward": 0.29,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 240,
+          "reference": 0.25,
+          "joint": 0.2436424344778061,
+          "densereward": 0.34,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 267,
+          "reference": 0.25,
+          "joint": 0.25982561707496643,
+          "densereward": 0.28,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 293,
+          "reference": 0.25,
+          "joint": 0.1980641782283783,
+          "densereward": 0.625,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 320,
+          "reference": 0.25,
+          "joint": 0.2436424344778061,
+          "densereward": 0.702,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 347,
+          "reference": 0.25,
+          "joint": 0.13846178352832794,
+          "densereward": 0.29,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 373,
+          "reference": 0.25,
+          "joint": 0.2030746340751648,
+          "densereward": 0.3,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 400,
+          "reference": 0.25,
+          "joint": 0.16026602685451508,
+          "densereward": 0.35,
+          "roboreward": 0.75
+        }
+      ]
+    },
+    {
+      "id": "scored-open_microwave",
+      "case_id": "open_microwave/seed_1000000255",
+      "title": "Open the microwave",
+      "outcome": "Recovered",
+      "terminal_success": 1,
+      "instruction": "Use the left arm to grab and open the dark gray slanted microwave box.",
+      "source_video": "scored-open_microwave-source.mp4",
+      "source_sha256": "c5ff73f9340b422b4494189d1f2ea68a41b0d2c4ce09ef2b7b033d7a16be291b",
+      "fps": 30.0,
+      "frame_count": 923,
+      "replay_seconds": 24,
+      "replay": "scored-open_microwave-replay.mp4",
+      "poster": "scored-open_microwave-poster.jpg",
+      "samples": [
+        {
+          "frame": 0,
+          "reference": 0.0,
+          "joint": 0.0027149852830916643,
+          "densereward": 0.0,
+          "roboreward": 0.0
+        },
+        {
+          "frame": 61,
+          "reference": 0.5,
+          "joint": 0.39094078540802,
+          "densereward": 0.95,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 123,
+          "reference": 0.5,
+          "joint": 0.2901756167411804,
+          "densereward": 0.2,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 184,
+          "reference": 0.5,
+          "joint": 0.1276526302099228,
+          "densereward": 0.706,
+          "roboreward": 0.5
+        },
+        {
+          "frame": 246,
+          "reference": 0.5,
+          "joint": 0.10669060051441193,
+          "densereward": 0.966,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 307,
+          "reference": 0.5,
+          "joint": 0.09138210862874985,
+          "densereward": 0.966,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 369,
+          "reference": 0.5,
+          "joint": 0.0792103186249733,
+          "densereward": 0.72,
+          "roboreward": 0.0
+        },
+        {
+          "frame": 430,
+          "reference": 0.5,
+          "joint": 0.06954174488782883,
+          "densereward": 0.62,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 492,
+          "reference": 0.5,
+          "joint": 0.05665242671966553,
+          "densereward": 0.625,
+          "roboreward": 0.25
+        },
+        {
+          "frame": 553,
+          "reference": 0.5,
+          "joint": 0.09534945338964462,
+          "densereward": 0.72,
+          "roboreward": 0.5
+        },
+        {
+          "frame": 615,
+          "reference": 0.5,
+          "joint": 0.1225232183933258,
+          "densereward": 0.29,
+          "roboreward": 0.5
+        },
+        {
+          "frame": 676,
+          "reference": 0.5,
+          "joint": 0.07585817575454712,
+          "densereward": 0.35,
+          "roboreward": 0.5
+        },
+        {
+          "frame": 738,
+          "reference": 0.0,
+          "joint": 0.07585817575454712,
+          "densereward": 0.34,
+          "roboreward": 0.5
+        },
+        {
+          "frame": 799,
+          "reference": 0.0,
+          "joint": 0.08269733935594559,
+          "densereward": 0.36,
+          "roboreward": 0.75
+        },
+        {
+          "frame": 861,
+          "reference": 0.0,
+          "joint": 0.10521054267883301,
+          "densereward": 0.35,
+          "roboreward": 0.5
+        },
+        {
+          "frame": 922,
+          "reference": 1.0,
+          "joint": 0.961533784866333,
+          "densereward": 0.995,
+          "roboreward": 0.75
+        }
+      ]
+    }
+  ]
+}

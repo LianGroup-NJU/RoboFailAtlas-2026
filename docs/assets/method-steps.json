@@ -1,0 +1,7 @@
+[
+  {"title":"Task and history","text":"A task instruction and observation history supply the model input.","boxes":[[0.024,0.070,0.098,0.448],[0.322,0.142,0.138,0.071]]},
+  {"title":"Shared model","text":"A frozen vision encoder and a language model with LoRA and prediction heads process the input.","boxes":[[0.183,0.185,0.107,0.232],[0.321,0.278,0.140,0.193]]},
+  {"title":"Joint predictions","text":"The heads predict progress, terminal success, and structured failure diagnostics.","boxes":[[0.509,0.112,0.196,0.375]]},
+  {"title":"Masked training","text":"Annotation labels supervise the masked joint loss; uncertain fields are masked independently.","boxes":[[0.740,0.139,0.233,0.348]]},
+  {"title":"Frozen rewards for PPO","text":"During PPO the reward model stays frozen; task feedback and failure penalties guide policy updates.","boxes":[[0.376,0.655,0.118,0.230],[0.542,0.655,0.245,0.282],[0.837,0.703,0.141,0.181]]}
+]

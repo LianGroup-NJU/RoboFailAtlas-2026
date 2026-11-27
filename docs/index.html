@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="RoboFailAtlas: Structured Reward Learning from Diverse Robot Failures. Complete robot trajectories, event-level failure annotations, and structured reward learning.">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="robots" content="noindex,nofollow">
+  <title>RoboFailAtlas: Structured Reward Learning from Diverse Robot Failures</title>
+  <link rel="icon" href="assets/favicon.svg?v=20261119-r7" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/google-sans-flex-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="academic.css?v=20261123-r10">
+  <script src="assets/cases.js" defer></script>
+  <script src="media.js?v=20261119-r7" defer></script>
+  <script src="app.js?v=20261119-r7" defer></script>
+  <script src="page.js?v=20261119-r7" defer></script>
+  <script src="motion.js?v=20261119-r7" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="hero" id="top">
+    <div class="container">
+      <h1 class="paper-title">RoboFailAtlas:<br><span class="subtitle">Structured Reward Learning from Diverse Robot Failures</span></h1>
+      <div class="author-list" id="authors">Preprint in preparation</div>
+      <div id="affiliations" class="affiliations" hidden></div>
+      <div class="link-buttons"><a class="resource-button" data-resource="paper_url" aria-disabled="true" role="link" title="Release in preparation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h5M9 12h6M9 16h6"/></svg><span>Paper</span></a><a class="resource-button" data-resource="code_url" aria-disabled="true" role="link" title="Release in preparation"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="5" r="2"/><circle cx="17" cy="8" r="2"/><circle cx="7" cy="19" r="2"/><path d="M7 7v10M17 10v2q0 3-5 3H7"/></svg><span>Code</span></a><a class="resource-button" data-resource="dataset_url" aria-disabled="true" role="link" title="Release in preparation"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></svg><span>Dataset</span></a><a class="resource-button" data-resource="models_url" aria-disabled="true" role="link" title="Release in preparation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10"/></svg><span>Models</span></a></div>
+      <p class="release-note">Paper, code, dataset, and model links will appear with the preprint.</p>
+    </div>
+  </header>
+  <div class="sticky-header" id="sticky-header"><div class="sticky-inner"><a class="back-top" href="#top">Back to top</a><div class="sticky-title"><strong>RoboFailAtlas:</strong> Structured Reward Learning from Diverse Robot Failures</div><a href="#demo" class="sticky-demo">Interactive Demo</a></div></div>
+  <nav class="contents" aria-label="Table of contents"><span class="contents-title">Table of contents</span><a href="#overview">Overview</a><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#prediction" class="sub-item">Reward Model Evaluation</a><a href="#results" class="sub-item">Policy Optimization</a><a href="#selection" class="sub-item">Failure-Guided Selection</a><a href="#real-world" class="sub-item">Real-World Experiments</a><a href="#demo">Interactive Demo</a><a href="#resources">Resources</a></nav>
+  <main id="main">
+    <section class="section video-section" id="video">
+      <div class="container container-medium">
+        <details class="video-collapse" open><summary class="video-label">Video Summary</summary>
+          <video id="overview-video" class="media-video overview-video" controls playsinline preload="none" poster="assets/video-poster.jpg?v=20261119-r7" data-media-src="assets/robofailatlas-overview.mp4?v=20261119-r7"></video>
+          <div class="video-links"><a href="assets/robofailatlas-overview.mp4?v=20261119-r7" download>Download video</a><a href="assets/overview-en.vtt?v=20261119-r7" download>English captions</a></div>
+        </details>
+      </div>
+    </section>
+    <section class="section" id="overview"><div class="container container-medium">
+      <h2>Overview</h2>
+      <figure class="figure-full "><img src="assets/dataset-overview.png?v=20261119-r4" loading="lazy" alt="RoboFailAtlas dataset overview from the manuscript"><figcaption>124,354 complete trajectories across 85 tasks, with an event-level annotated subset of 29,500 trajectories.</figcaption></figure>
+      <p>We introduce <strong>RoboFailAtlas</strong>, a dataset of complete robot executions collected in RoboTwin and RoboDojo. It preserves successes, failures, retries, and recoveries across diverse manipulation tasks. The <strong>RoboFailAtlas-Structured</strong> subset links local failure events to atomic actions and visual evidence, while separately recording task progress and terminal success. These annotations support structured reward learning and downstream policy improvement.</p>
+    </div></section>
+    <section class="section" id="abstract"><div class="container container-medium">
+      <h2>Abstract</h2>
+      <p>Failed trajectories capture a broad range of policy behaviors, but large-scale failure data spanning diverse manipulation tasks with fine-grained, event-level annotations remain underexplored. We introduce <strong>RoboFailAtlas</strong>, containing 124,354 robot execution trajectories across 85 manipulation tasks, and define a taxonomy of 36 failure types, 15 failure outcomes, and three recovery states to describe what goes wrong, which conditions remain unmet, and whether the policy recovers.</p>
+      <p>We provide a structured subset of 29,500 trajectories across 50 RoboTwin tasks. Each temporally localized failure event is linked to its atomic-action segments and visual evidence, alongside task progress and terminal success. A jointly supervised reward model predicts task completion and structured failure information, enabling fine-grained failure diagnosis and failure-aware policy optimization.</p>
+      <p>Across five tasks, PPO with structured rewards achieves <strong>50.6% average success</strong>, compared with 40.0% for task-only rewards and 40.8% for environment rewards. Further experiments examine failure-guided demonstration selection in simulation and learning from corrective demonstrations on real robots.</p>
+    </div></section>
+    <section class="section" id="method"><div class="container container-medium">
+      <h2>Method</h2>
+      <p>Our framework combines complete-trajectory collection, event-level structured annotation, and joint reward learning. The representation separates <strong>failure types</strong>, <strong>unmet task conditions</strong>, and <strong>recovery states</strong>; 70 atomic-action categories supply the execution context.</p>
+      <h3>Structured Annotations</h3>
+      <figure class="figure-full "><img src="assets/structured-annotations.png?v=20261119-r4" loading="lazy" alt="Failure taxonomy and event-level microwave annotation from the manuscript"><figcaption>A local grasp slip, a later retry, and successful recovery are linked to video frames, action segments, progress scores, and structured JSON.</figcaption></figure>
+      <p>Multimodal annotation drafts are refined through human spot checks, automated verification, and review of flagged cases. Missing or uncertain fields are masked independently. A recovered local failure can coexist with an unsuccessful full trajectory, so recovery and terminal success are recorded separately.</p>
+      <h3>Structured Reward Learning</h3>
+      <div class="method-walkthrough"><figure class="figure-full"><div class="method-image"><img src="assets/reward-model.png?v=20261119-r4" loading="lazy" alt="Offline reward-model training and online PPO from the manuscript"><div class="method-overlay" aria-hidden="true"></div></div><figcaption>Joint training predicts task progress, terminal success, and structured failures. The reward model remains frozen during PPO.</figcaption></figure><div class="method-controls" role="group" aria-label="Method walkthrough"><button type="button" data-method-step="0" aria-pressed="false" disabled>Task and history</button><button type="button" data-method-step="1" aria-pressed="false" disabled>Shared model</button><button type="button" data-method-step="2" aria-pressed="false" disabled>Joint predictions</button><button type="button" data-method-step="3" aria-pressed="false" disabled>Masked training</button><button type="button" data-method-step="4" aria-pressed="false" disabled>Frozen rewards for PPO</button><button type="button" class="method-play" aria-pressed="false" disabled>Play walkthrough</button></div><p class="method-description" aria-live="polite"></p></div>
+      <p>Given a task instruction and observation history, a Qwen3-VL-based reward model predicts progress, terminal success, failure-associated actions, failure types, outcomes, and recovery states. Its predictions provide task feedback and bounded failure penalties for policy optimization.</p>
+    </div></section>
+    <section class="section" id="experiments"><div class="container container-medium">
+      <h2>Experiments</h2>
+      <h3 id="prediction">Reward Model Evaluation</h3>
+      <p>We evaluate all models on the paper's fixed RoboTwin test set. The joint model retains strong task prediction while supporting structured failure diagnosis.</p>
+      <div class="table-wrapper"><table class="results-table"><caption>Task prediction on the fixed RoboTwin test set (main paper, Table 1)</caption><thead><tr><th scope="col">Model</th><th scope="col">Progress MAE ↓</th><th scope="col">Terminal AUC ↑</th><th scope="col">Balanced Acc. ↑</th><th scope="col">Success F1 ↑</th></tr></thead><tbody>
+      <tr><th scope="row">Robometer-4B</th><td>0.3405</td><td>0.7483</td><td>71.13%</td><td>0.6016</td></tr>
+      <tr><th scope="row">RoboReward-4B</th><td>0.2536</td><td>0.5434</td><td>58.11%</td><td>0.5059</td></tr>
+      <tr><th scope="row">RoboReward-8B</th><td>0.2559</td><td>0.5183</td><td>50.63%</td><td>0.2020</td></tr>
+      <tr><th scope="row">DenseReward</th><td>0.3355</td><td>0.6399</td><td>61.88%</td><td>0.5167</td></tr>
+      <tr><th scope="row">Ours (Task-only)</th><td>0.0857</td><td>0.9952</td><td>97.72%</td><td>0.9673</td></tr>
+      <tr><th scope="row">Ours (T-only, Full)</th><td>—</td><td>0.9969</td><td>98.15%</td><td>0.9683</td></tr>
+      <tr class="highlight-row"><th scope="row">Ours (Joint)</th><td>0.0956</td><td>0.9949</td><td>97.58%</td><td>0.9636</td></tr>
+      </tbody></table></div>
+      <h4 class="structured-heading" id="structured-metrics">Structured Prediction (Micro-F1)</h4>
+      <div class="table-wrapper structured-table-wrapper" role="region" aria-labelledby="structured-metrics" tabindex="0"><table class="results-table structured-results" data-main-paper-source="Table 1">
+        <caption>Joint model structured prediction, as reported in the main paper (Table 1).</caption>
+        <thead><tr><th scope="col">Model</th><th scope="col">Action F1 ↑</th><th scope="col">Type F1 ↑</th><th scope="col">Outcome F1 ↑</th><th scope="col">Recovery F1 ↑</th></tr></thead>
+        <tbody><tr class="highlight-row"><th scope="row">Ours (Joint)</th><td>0.9376</td><td>0.9369</td><td>0.9682</td><td>0.7605</td></tr></tbody>
+      </table></div>
+      <p class="structured-metrics-note">All four scores are Micro-F1. Recovery predictions with maximum class probability below 0.5 are treated as abstentions, following the main paper.</p>
+      <figure class="figure-full "><img src="assets/progress-prediction.png?v=20261119-r4" loading="lazy" alt="Manuscript examples comparing reference progress, Joint RM, DenseReward, and RoboReward"><figcaption>Qualitative progress prediction for success, grip loss, failure and recovery, and wrong-object manipulation.</figcaption></figure>
+      <h4 class="centered">Synchronized Progress Replays</h4><p>Watch the recorded trajectory alongside the paper's reference annotation and model predictions. The cursor follows the original frame; each curve reveals its 16 saved samples. Lines connect neighboring scored points, and displayed scores hold the most recent sample.</p><figure class="progress-replay"><h4>Lift the pot — Grip loss</h4><video id="scored-lift_pot" controls muted playsinline preload="none" poster="assets/scored-lift_pot-poster.jpg?v=20261119-r7" data-media-src="assets/scored-lift_pot-replay.mp4?v=20261119-r7" aria-label="Lift the pot, synchronized robot video and progress scores"></video><div class="video-controls" data-player="scored-lift_pot"><label for="scored-lift_pot-seek">Seek replay</label><input id="scored-lift_pot-seek" class="media-seek" type="range" min="0" max="16" step="0.05" value="0" disabled aria-label="Seek lift the pot replay"><output class="media-time" for="scored-lift_pot-seek">00:00 / 00:16</output></div><figcaption>401 original frames · 0.84× encoded playback speed · Trajectory label T = 0. Precomputed replay of the paper example.</figcaption></figure><figure class="progress-replay"><h4>Open the microwave — Recovered</h4><video id="scored-open_microwave" controls muted playsinline preload="none" poster="assets/scored-open_microwave-poster.jpg?v=20261119-r7" data-media-src="assets/scored-open_microwave-replay.mp4?v=20261119-r7" aria-label="Open the microwave, synchronized robot video and progress scores"></video><div class="video-controls" data-player="scored-open_microwave"><label for="scored-open_microwave-seek">Seek replay</label><input id="scored-open_microwave-seek" class="media-seek" type="range" min="0" max="24" step="0.05" value="0" disabled aria-label="Seek open the microwave replay"><output class="media-time" for="scored-open_microwave-seek">00:00 / 00:24</output></div><figcaption>923 original frames · 1.28× encoded playback speed · Trajectory label T = 1. Precomputed replay of the paper example.</figcaption></figure><div class="replay-links"><a href="assets/progress-replays.csv" download>Download score samples (CSV)</a><a href="assets/progress-replays.json" download>Replay data and provenance (JSON)</a></div>
+      <h3 id="results">Policy Optimization with Structured Rewards</h3>
+      <p>All variants start from the same task-specific SFT policy and are evaluated on the same 100 scenes per task. Structured rewards achieve <strong>50.6% average success</strong>, versus 40.8% for environment rewards and 40.0% for task-only rewards.</p>
+      <figure class="figure-full "><img src="assets/ppo-results.png?v=20261119-r4" loading="lazy" alt="PPO policy success rates from the manuscript"><figcaption>Task-wise and average PPO success rates on five RoboTwin tasks. Values are percentages.</figcaption></figure>
+      <details class="numerical-results"><summary>View numerical results</summary><div class="table-scroll"><table><caption>PPO success rates from the main paper (Figure 5), with 100 fixed evaluation scenes per task (%)</caption><thead><tr><th scope="col">RoboTwin task</th><th scope="col">Initial SFT</th><th scope="col">Environment reward</th><th scope="col">Task reward</th><th scope="col">Structured reward</th></tr></thead><tbody><tr><th scope="row">Press stapler</th><td>58</td><td>61</td><td>59</td><td class="best">76</td></tr><tr><th scope="row">Hammer the block</th><td>29</td><td>32</td><td>31</td><td class="best">35</td></tr><tr><th scope="row">Move can to pot</th><td>4</td><td>4</td><td>2</td><td class="best">6</td></tr><tr><th scope="row">Place empty cup</th><td>67</td><td>70</td><td>65</td><td class="best">75</td></tr><tr><th scope="row">Adjust bottle</th><td>32</td><td>37</td><td>43</td><td class="best">61</td></tr></tbody><tfoot><tr><th scope="row">Average</th><td>38.0</td><td>40.8</td><td>40.0</td><td class="best">50.6</td></tr></tfoot></table></div></details>
+      <h3 id="selection">Failure-Guided Demonstration Selection</h3>
+      <p>Failure-associated actions guide the selection of expert demonstration segments. With matched data amounts and training budgets, failure-guided selection reaches 46.2% average success, compared with 39.6% for random selection.</p>
+      <figure class="figure-full "><img src="assets/selection-results.png?v=20261119-r4" loading="lazy" alt="Failure-guided demonstration selection results from the manuscript"><figcaption>Failure-guided selection improves average success over matched random selection across five tasks.</figcaption></figure>
+      <h3 id="real-world">Real-World Learning from Failure Corrections</h3>
+      <p>On two PiPER tasks, corrective demonstrations start from failure states reached by the initial policy. With matched additional data and training budgets, they improve average success by <strong>7.0 percentage points</strong> over adding standard successful demonstrations.</p>
+      <figure class="figure-full real-world-figure"><img src="assets/real-world-results.png?v=20261119-r4" loading="lazy" alt="Manuscript PiPER block-stacking and block-placement results"><figcaption>Real-world evaluation on block stacking and block placement, with 50 trials per policy and task.</figcaption></figure>
+    </div></section>
+    <section class="section" id="demo"><div class="container container-medium">
+      <h2>Interactive Demo</h2>
+      <p>Explore 30 curated examples from 18 recorded rollouts. Inspect the associated failure type, unmet condition, recovery state, action segments, and frame-indexed evidence.</p>
+      <figure class="featured-example">
+        <video id="hero-video" class="media-video" controls muted playsinline preload="none" poster="assets/hero-poster.jpg?v=20261119-r7" data-media-src="assets/hero-bottle-release.mp4?v=20261119-r7" aria-label="A bottle is released at an unstable angle and falls onto its side"></video>
+        <figcaption>Featured example: the bottle falls onto its side after release, leaving the required upright orientation unmet. Original frames 24–200 at 0.75× encoded playback speed; trajectory label T = 0.</figcaption>
+      </figure>
+      <div class="filter-bar" role="group" aria-label="Example category"><button class="filter active" data-category="all" aria-pressed="true">All examples</button><button class="filter" data-category="failure_types" aria-pressed="false">Failure types</button><button class="filter" data-category="failure_results" aria-pressed="false">Unmet outcomes</button><button class="filter" data-category="recovery_states" aria-pressed="false">Recovery states</button></div>
+      <div class="case-picker"><div class="select-wrap"><label for="case-select">Choose an example</label><select id="case-select"></select></div><div class="picker-controls"><button id="previous-case" class="square-button" aria-label="Previous example">Previous</button><span id="case-position" class="mono"></span><button id="next-case" class="square-button" aria-label="Next example">Next</button></div></div>
+      <div class="explorer">
+        <div class="player-column">
+          <div class="player-title"><span id="case-task"></span><span class="mono" id="frame-display">Frame 0</span></div>
+          <video id="case-video" controls playsinline preload="metadata" aria-label="Selected robot trajectory"></video>
+          <div class="scrub-row"><label class="visually-hidden" for="frame-slider">Seek to original video frame</label><input id="frame-slider" type="range" min="0" max="1075" value="0" step="1"><span id="frame-total" class="mono"></span></div>
+          <div class="playback-row"><span>Current action: <strong id="current-action">—</strong></span><label>Playback <select id="playback-speed" aria-label="Playback speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+          <div class="timeline-label">Atomic action segments <span>Click a segment to seek</span></div><div id="action-timeline" class="action-timeline" aria-label="Annotated atomic action segments"></div>
+          <div id="stage-grid" class="stage-grid"></div>
+        </div>
+        <aside class="annotation-panel" aria-label="Event annotation">
+          <p class="eyebrow">Recorded event annotation</p><h3 id="case-title"></h3><p class="instruction" id="case-instruction"></p>
+          <div class="annotation-field"><span class="field-label">Failure type</span><div id="type-labels"></div></div>
+          <div class="annotation-field"><span class="field-label">Unmet task condition</span><div id="outcome-labels"></div></div>
+          <div class="annotation-field"><span class="field-label">Recovery of this event</span><div id="recovery-label"></div></div>
+          <div class="terminal-row"><span>Trajectory terminal label</span><strong id="terminal-label"></strong></div>
+          <div class="event-meta mono" id="event-meta"></div><button id="jump-event" class="button secondary">Jump to event start</button>
+          <p class="annotation-note">These are saved candidate annotations, not live model predictions or an independently reviewed reference. Local recovery and whole-trajectory success are separate labels.</p>
+          <button id="download-json" class="text-link">Download example JSON</button>
+        </aside>
+      </div>
+      <details class="json-details"><summary>Inspect the structured JSON</summary><pre id="case-json"></pre></details>
+      <p class="figure-note">Frame indices refer to the original encoded video. Playback time is not physical execution time. Examples are selected for illustration, not for estimating class frequencies or model accuracy.</p>
+      <div class="demo-error" id="demo-error" role="alert" hidden></div>
+    
+    </div></section>
+    <section class="section" id="resources"><div class="container container-medium">
+      <h2>Resources</h2><p class="centered muted">Paper, code, dataset, and model release links are being prepared.</p>
+      <details id="citation-section" hidden><summary>Citation</summary><div class="bibtex-block"><pre id="bibtex"></pre><button id="copy-citation" class="square-button">Copy BibTeX</button></div></details>
+    </div></section>
+  </main>
+  <footer class="footer">RoboFailAtlas · Structured Reward Learning from Diverse Robot Failures</footer>
+</body></html>

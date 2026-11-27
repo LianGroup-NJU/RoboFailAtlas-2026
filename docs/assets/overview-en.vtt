@@ -1,0 +1,73 @@
+WEBVTT
+
+00:00:00.150 --> 00:00:06.850
+RoboFailAtlas turns diverse robot failures into structured supervision for reward learning and policy improvement.
+
+00:00:07.150 --> 00:00:10.038
+The dataset covers eighty five tasks.
+
+00:00:10.038 --> 00:00:14.850
+Its structured subset contains twenty nine thousand five hundred trajectories.
+
+00:00:15.150 --> 00:00:18.919
+Frame intervals link actions, visual evidence, and structured labels.
+
+00:00:18.919 --> 00:00:21.850
+Recovery and terminal success are recorded separately.
+
+00:00:22.150 --> 00:00:28.675
+The taxonomy covers seventy actions, thirty six failure types, fifteen outcomes, and three recovery states.
+
+00:00:28.675 --> 00:00:30.850
+Uncertain annotation fields are masked.
+
+00:00:31.150 --> 00:00:36.540
+Here, the bottle is released at an unstable angle and falls onto its side.
+
+00:00:36.540 --> 00:00:38.850
+The required upright orientation remains unmet.
+
+00:00:39.150 --> 00:00:43.700
+In another rollout, a failed block grasp is recovered by a later regrasp.
+
+00:00:43.700 --> 00:00:46.850
+Local recovery remains separate from the final trajectory outcome.
+
+00:00:47.150 --> 00:00:51.837
+Contact can collapse a block stack, while repeated attempts can leave a fan unrecovered.
+
+00:00:51.837 --> 00:00:54.850
+Process errors and unmet task conditions have separate labels.
+
+00:00:55.150 --> 00:00:58.075
+Task instructions and observations enter a shared model.
+
+00:00:58.075 --> 00:01:02.097
+Joint heads predict task and failure signals, trained with masked losses.
+
+00:01:02.097 --> 00:01:06.850
+During PPO, the reward model stays frozen while its feedback updates the policy.
+
+00:01:07.150 --> 00:01:11.840
+These replays use the same scored frames as the paper.
+
+00:01:11.840 --> 00:01:16.062
+During pot lifting, predicted progress falls after grip loss.
+
+00:01:16.062 --> 00:01:19.814
+Markers are saved scores; lines connect neighboring samples.
+
+00:01:19.814 --> 00:01:26.850
+A later retry eventually succeeds in the microwave rollout, and the final progress score rises.
+
+00:01:27.150 --> 00:01:38.850
+Across five RoboTwin tasks, structured rewards achieve fifty point six percent average success, compared with forty point eight for environment rewards, using the same one hundred evaluation scenes per task.
+
+00:01:39.150 --> 00:01:46.850
+Failure guided selection improves success from thirty nine point six to forty six point two percent.
+
+00:01:47.150 --> 00:01:56.850
+On two real robot tasks, corrective demonstrations improve average success by seven percentage points over additional successful demonstrations.
+
+00:01:57.150 --> 00:01:59.850
+Explore the project website.
