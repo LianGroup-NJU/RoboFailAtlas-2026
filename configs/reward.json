@@ -1,0 +1,42 @@
+{
+  "schema": "structured-rm-reward-v1",
+  "high_threshold": 0.8,
+  "low_threshold": 0.5,
+  "confirmation_steps": 2,
+  "type_label_weight": 0.025,
+  "type_step_cap": 0.05,
+  "type_episode_cap": 0.1,
+  "result_terminal_cap": 0.05,
+  "max_recovery_refund": 0.0,
+  "recovery_refund_fraction": 0.5,
+  "terminal_success_threshold": 0.8,
+  "type_weights": {
+    "FAIL.B01": 1.0,
+    "FAIL.B03": 1.0,
+    "FAIL.B04": 1.0,
+    "FAIL.B09": 1.0,
+    "FAIL.B10": 1.0,
+    "FAIL.D02": 1.0,
+    "FAIL.D09": 1.0
+  },
+  "result_weights": {
+    "FAIL.C01": 1.0,
+    "FAIL.C02": 1.0,
+    "FAIL.C03": 1.0,
+    "FAIL.C04": 1.0,
+    "FAIL.C05": 1.0,
+    "FAIL.C09": 1.0,
+    "FAIL.C11": 1.0,
+    "FAIL.C12": 1.0,
+    "FAIL.C13": 1.0,
+    "FAIL.C14": 1.0
+  },
+  "action_supported_codes": [
+    "ATOM.Carry",
+    "ATOM.Grasp",
+    "ATOM.Hammer",
+    "ATOM.Place",
+    "ATOM.Press",
+    "ATOM.Release"
+  ]
+}

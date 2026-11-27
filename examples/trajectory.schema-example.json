@@ -1,0 +1,22 @@
+{
+  "note": "Illustrative schema only; values are not experimental measurements.",
+  "case_id": "demo_trajectory",
+  "task": "open_microwave",
+  "split": "train",
+  "instruction": "Open the microwave.",
+  "video": "example.mp4",
+  "frame_count": 120,
+  "environment_success": 1,
+  "progress": [
+    {
+      "frame": 0,
+      "value": 0.0,
+      "known": true
+    },
+    {
+      "frame": 119,
+      "value": 1.0,
+      "known": true
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "_base_": "../rm_joint.json",
+  "loss_weights": {
+    "recovery": 0.025
+  }
+}

@@ -1,0 +1,24 @@
+_base_: ../ppo.yaml
+runner:
+  logger:
+    experiment_name: structured_move_can_pot_seed1
+  max_epochs: 20
+  max_steps: 20
+algorithm:
+  kl_beta: 0.1
+  critic_warmup_rounds: 10
+  target_rollout_kl: 0.02
+env:
+  train:
+    task_config:
+      task_name: move_can_pot
+    task_horizon_is_terminal: true
+  eval:
+    task_config:
+      task_name: move_can_pot
+    task_horizon_is_terminal: true
+actor:
+  model:
+    openpi:
+      joint_logprob: false
+      safe_get_logprob: false

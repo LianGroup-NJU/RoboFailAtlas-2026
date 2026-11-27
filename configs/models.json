@@ -1,0 +1,24 @@
+{
+  "joint_offline": {
+    "checkpoint_env": "FAILATLAS_RM_CHECKPOINT",
+    "historical_step": 23244,
+    "purpose": "offline reward model prediction tables"
+  },
+  "joint_ppo": {
+    "checkpoint_env": "FAILATLAS_PPO_RM_CHECKPOINT",
+    "historical_step": 11622,
+    "purpose": "frozen RM used for the original Structured PPO"
+  },
+  "t_only_full": {
+    "checkpoint_env": "FAILATLAS_T_ONLY_CHECKPOINT",
+    "purpose": "full-pool T-only supplementary experiment"
+  },
+  "initial_sft": {
+    "checkpoint_env": "FAILATLAS_SFT_CHECKPOINT",
+    "historical_step": 40000
+  },
+  "huggingface_repositories": {
+    "models": null,
+    "dataset": null
+  }
+}

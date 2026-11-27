@@ -1,0 +1,27 @@
+{
+  "train_steps": 1000,
+  "global_batch": 64,
+  "micro_batch": 1,
+  "training_seed": 42,
+  "lr": 5e-06,
+  "min_lr": 1e-06,
+  "warmup_steps": 50,
+  "save_steps": [
+    250,
+    500,
+    1000
+  ],
+  "gradient_clip": 1.0,
+  "world_size": 2,
+  "primary_report_step": 1000,
+  "mask_outside_segment_only": true,
+  "paired_anchor_schedule": true,
+  "train_expert_only": false,
+  "tasks": {
+    "press_stapler": {},
+    "beat_block_hammer": {},
+    "move_can_pot": {},
+    "place_empty_cup": {},
+    "adjust_bottle": {}
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "structured_dataset": {
+    "tasks": 50,
+    "train_trajectories": 23608,
+    "validation_trajectories": 2941,
+    "test_trajectories": 2951,
+    "train_score_rows": 371883,
+    "validation_score_rows": 46391,
+    "test_score_rows": 46583
+  },
+  "full_T_dataset": {
+    "train_trajectories": 118354,
+    "validation_trajectories": 2941,
+    "test_trajectories": 2951,
+    "raw_pool": 124354,
+    "usable_pool": 124246,
+    "reserved_exclusions": 108
+  },
+  "rm_loss": {
+    "lambda_struct": 0.1,
+    "lambda_rec": 0.5,
+    "mapping": "each action/type/outcome weight=lambda_struct; recovery weight=lambda_struct*lambda_rec",
+    "completed_configs": [
+      {
+        "lambda_struct": 0.05,
+        "lambda_rec": 0.5
+      },
+      {
+        "lambda_struct": 0.1,
+        "lambda_rec": 0.5
+      },
+      {
+        "lambda_struct": 0.2,
+        "lambda_rec": 0.5
+      },
+      {
+        "lambda_struct": 0.1,
+        "lambda_rec": 0.25
+      },
+      {
+        "lambda_struct": 0.1,
+        "lambda_rec": 1.0
+      }
+    ],
+    "pending_config": null
+  },
+  "PPO": {
+    "tasks": [
+      "beat_block_hammer",
+      "move_can_pot",
+      "place_empty_cup",
+      "press_stapler",
+      "adjust_bottle"
+    ],
+    "target_updates": {
+      "beat_block_hammer": 20,
+      "move_can_pot": 20,
+      "place_empty_cup": 20,
+      "press_stapler": 100,
+      "adjust_bottle": 100
+    },
+    "effective_batch": 64,
+    "environments": 24,
+    "action_chunk": 50,
+    "reference_actor_world_size": 4,
+    "reference_rollout_world_size": 8,
+    "six_GPU_profile_actor_world_size": 4,
+    "six_GPU_profile_rollout_world_size": 4,
+    "reference_seed": 0,
+    "additional_seeds": [
+      1,
+      2
+    ],
+    "terminal_test_scenes": 100,
+    "seed1_seed2_complete": false,
+    "additional_seeds_status": "cancelled; no multi-seed stability claim",
+    "selected_main_paper_rounds": {
+      "environment": {
+        "press_stapler": 98,
+        "beat_block_hammer": 20,
+        "move_can_pot": 20,
+        "place_empty_cup": 20,
+        "adjust_bottle": 100
+      },
+      "task": {
+        "press_stapler": 50,
+        "beat_block_hammer": 20,
+        "move_can_pot": 20,
+        "place_empty_cup": 20,
+        "adjust_bottle": 20
+      },
+      "structured": {
+        "press_stapler": 50,
+        "beat_block_hammer": 20,
+        "move_can_pot": 20,
+        "place_empty_cup": 20,
+        "adjust_bottle": 100
+      }
+    },
+    "historical_instruction_mismatches": [
+      "move_can_pot",
+      "place_empty_cup",
+      "adjust_bottle"
+    ],
+    "interpretation": "Archived budgets and some instruction strings differ; not a fully matched reward-source comparison.",
+    "supplementary_full_t_rounds": 20,
+    "supplementary_scope": "Full T-only PPO; no Robometer PPO comparison"
+  },
+  "failure_sft": {
+    "new_clip_protocol_tasks": [
+      "adjust_bottle",
+      "move_can_pot",
+      "place_empty_cup"
+    ],
+    "historical_reused_tasks": [
+      "press_stapler",
+      "beat_block_hammer"
+    ]
+  }
+}

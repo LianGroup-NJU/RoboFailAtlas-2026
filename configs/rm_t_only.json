@@ -1,0 +1,11 @@
+{
+  "_base_": "rm_joint.json",
+  "method": "at",
+  "loss_weights": {
+    "A": 0.0,
+    "failure_actions": 0.0,
+    "failure_types": 0.0,
+    "failure_results": 0.0,
+    "recovery": 0.0
+  }
+}

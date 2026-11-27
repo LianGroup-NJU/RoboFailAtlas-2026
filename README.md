@@ -4,42 +4,71 @@
 
 [Project website](https://failatlas-research-preview.aquaash11.chatgpt.site/)
 
-This repository currently contains the project website, paper figures, narrated
-overview video, and interactive trajectory examples. Research code will be added
-in a separate update.
+This repository contains reward-model training and evaluation, policy-learning
+adapters, and the project website.
 
-## Website files
+## Quick start
 
-The complete static website is in [`docs/`](docs/). It includes its fonts, images,
-videos, and example annotations, and requires no build step or external CDN.
+Use Python 3.11 or later. Keep reward-model and policy environments separate;
+see [environment notes](requirements/README.md).
 
-To preview it locally, run the following command from this repository and open
-<http://localhost:8000>:
+```bash
+python -m pip install -e ".[config]"
+python scripts/replay_metrics.py
+python -m unittest discover -s tests -v
+failatlas --help
+```
 
-```sh
+Fill the paths in `.env.example`, then export the variables needed by your run.
+Training requires external datasets, model checkpoints, and the qualified
+RLinf/OpenPI/RoboTwin runtime.
+
+```bash
+bash scripts/train_rm.sh joint
+bash scripts/train_rm.sh task-only
+bash scripts/train_rm.sh t-only
+bash scripts/evaluate_rm.sh
+bash scripts/serve_rm.sh
+bash scripts/train_ppo.sh beat_block_hammer
+bash scripts/train_failure_sft.sh guided move_can_pot /path/to/new/run
+```
+
+## Layout
+
+- `src/`: reward models, data interfaces, and evaluation.
+- `configs/`: shared defaults, model variants, and task presets.
+- `scripts/`: training, evaluation, serving, and metric-replay entry points.
+- `integrations/`: PPO and failure-guided SFT adapters.
+- `examples/` and `tests/`: examples, saved-prediction replay, and CPU checks.
+- `documentation/`: [data](documentation/DATA.md), [metrics](documentation/METRICS.md),
+  [policy runtime](documentation/POLICY.md), and [configuration notes](documentation/CONFIGURATION.md).
+- `docs/`: static project website, figures, videos, and trajectory examples.
+
+Presets inherit shared settings through `_base_`. Inspect a resolved config with
+`failatlas config configs/rm_joint.json`. The PPO presets retain historical
+budgets; their relationship to later paper settings is recorded in the
+configuration notes. CPU checks and saved-prediction replay do not establish
+end-to-end GPU reproduction.
+
+## Website
+
+The website requires no build step. Preview it from this repository:
+
+```bash
 python -m http.server 8000 --directory docs
 ```
 
-## GitHub Pages
+Open <http://localhost:8000>. GitHub Pages can serve `main` / `docs` when allowed
+by the organization's plan and policy. Its project URL is
+<https://liangroup-nju.github.io/RoboFailAtlas-2026/> once deployment is enabled.
+Release links are configured in [`docs/release.json`](docs/release.json).
 
-A repository administrator can enable hosting at **Settings → Pages**:
+## License and resources
 
-1. Set **Source** to **Deploy from a branch**.
-2. Select the **main** branch and **/docs** folder.
-3. Save and wait for the Pages deployment to finish.
-
-The default project URL will then be
-<https://liangroup-nju.github.io/RoboFailAtlas-2026/>. Hosting availability for a
-private repository depends on the organization's GitHub plan and policy.
-
-The existing project website above remains available while GitHub Pages is being
-configured. Future website updates should be committed under `docs/`.
-
-## Release links
-
-Confirmed paper, dataset, model, author, and citation information is configured in
-[`docs/release.json`](docs/release.json). Unreleased resource buttons stay inactive
-until their actual URLs are supplied.
-
-The bundled Google Sans Flex font retains its
+A project license has not yet been selected; see [license status](LICENSE_STATUS.md)
+and [third-party notices](third_party/NOTICE.md). The bundled font retains its
 [SIL Open Font License](docs/assets/fonts/OFL.txt).
+
+Model weights and external training datasets are not bundled. The confidential
+annotation-generation pipeline, full generation prompts, task-scoring
+implementation, and private annotation services are excluded.

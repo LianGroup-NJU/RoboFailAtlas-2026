@@ -1,0 +1,23 @@
+{
+  "note": "Artificial counts for demonstrating the input schema, not paper results.",
+  "rows": [
+    {
+      "task": "demo_task",
+      "seed": 0,
+      "successes": 40,
+      "episodes": 100
+    },
+    {
+      "task": "demo_task",
+      "seed": 1,
+      "successes": 42,
+      "episodes": 100
+    },
+    {
+      "task": "demo_task",
+      "seed": 2,
+      "successes": 41,
+      "episodes": 100
+    }
+  ]
+}

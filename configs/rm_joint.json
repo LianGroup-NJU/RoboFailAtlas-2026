@@ -1,0 +1,12 @@
+{
+  "_base_": "base.json",
+  "method": "joint",
+  "loss_weights": {
+    "A": 1.0,
+    "T": 1.0,
+    "failure_actions": 0.1,
+    "failure_types": 0.1,
+    "failure_results": 0.1,
+    "recovery": 0.05
+  }
+}

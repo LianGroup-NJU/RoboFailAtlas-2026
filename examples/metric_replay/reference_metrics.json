@@ -1,0 +1,29 @@
+{
+  "metrics": {
+    "A_mae": 0.0955994556341653,
+    "T_auc": 0.9948667316756054,
+    "balanced_accuracy": 0.9758042147461943,
+    "success_f1": 0.9636163175303197,
+    "failure_actions.micro_precision": 0.8995433789954338,
+    "failure_actions.micro_recall": 0.9899497487437185,
+    "failure_actions.micro_f1": 0.9425837320574163,
+    "failure_actions.macro_f1": 0.7802390910137262,
+    "failure_types.micro_precision": 0.9034608378870674,
+    "failure_types.micro_recall": 0.9860834990059643,
+    "failure_types.micro_f1": 0.9429657794676806,
+    "failure_types.macro_f1": 0.800637071769514,
+    "failure_results.micro_precision": 0.9523485364193329,
+    "failure_results.micro_recall": 0.9904424778761062,
+    "failure_results.micro_f1": 0.9710220371334375,
+    "failure_results.macro_f1": 0.9378201642798066,
+    "recovery.micro_precision": 0.7783964365256125,
+    "recovery.micro_recall": 0.7635172037138176,
+    "recovery.micro_f1": 0.770885028949545,
+    "recovery.macro_f1": 0.6694163941089647
+  },
+  "tolerance": 1e-12,
+  "samples": 46583,
+  "A_valid_points": 46530,
+  "T_terminal_cases": 2951,
+  "model_role": "default offline Joint; four epochs; lambda_struct0.10 and lambda_rec0.50"
+}

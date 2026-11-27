@@ -1,0 +1,63 @@
+{
+  "model_name_or_path": "${FAILATLAS_BASE_MODEL}",
+  "mode": "history",
+  "method": "joint",
+  "mixed_precision": "bf16",
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "gradient_checkpointing": true,
+  "seed": 42,
+  "batch_size": 8,
+  "gradient_accumulation_steps": 8,
+  "learning_rate": 2e-05,
+  "head_learning_rate": 0.0001,
+  "num_epochs": 4,
+  "warmup_ratio": 0.03,
+  "weight_decay": 0.01,
+  "max_pixels": 262144,
+  "min_pixels": 4096,
+  "max_tokens": 8192,
+  "history_max_frames": 8,
+  "save_every": 5811,
+  "eval_every": 0,
+  "save_first_step": false,
+  "loss_weights": {
+    "A": 1.0,
+    "T": 1.0,
+    "failure_actions": 0.1,
+    "failure_types": 0.1,
+    "failure_results": 0.1,
+    "recovery": 0.05
+  },
+  "local_files_only": true,
+  "base_model_repo": "Qwen/Qwen3-VL-4B-Instruct",
+  "base_model_revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+  "backend": "qwen3vl",
+  "required_world_size": 8,
+  "validation_at_end": true,
+  "score_losses": {
+    "A": "mse",
+    "T": "bce_with_logits"
+  },
+  "input_frame_budget": 8,
+  "frame_sampling": "uniform_prefix",
+  "fixed_epochs": true,
+  "layout_handoff": {
+    "checkpoint": "${FAILATLAS_EXTERNAL_PATH}",
+    "position_sha256": "4a47142d0e55661d5245013a0ce91ed8f4423e869194b9a12c5d85d2ef78f7e7",
+    "model_sha256": "790ab87d5301f622c35fc7a39d6c40cf4c2ec0bf5ffe63f14d2087acd57a9c17",
+    "state_sha256": {
+      "optimizer.bin": "809c652b564c6f9ceca99d4e27f8e092ef1ca8a212d4c7430d224b2045e0e4be",
+      "scheduler.bin": "8e26422f6fddbfb0b55503b4952c57e1febf948c084931ab1b5ef01bc8e53aa1",
+      "random_states_0.pkl": "783af53be3e5e45052d5b5f6f41fdfd4aaa9985f0ee6a135ffd2e7203f9d2ada"
+    }
+  },
+  "supervision_density": {
+    "A": 0.9986662471798926,
+    "T": 0.06348233180866025,
+    "recovery": 0.09163634799116926,
+    "failure_actions": 0.019902688287906218,
+    "failure_types": 0.022099020390821844,
+    "failure_results": 0.025646955269981866
+  }
+}

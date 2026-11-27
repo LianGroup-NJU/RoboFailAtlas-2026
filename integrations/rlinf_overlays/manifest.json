@@ -1,0 +1,22 @@
+{
+  "schema": "rlinf-overlay-v1",
+  "git_commit": null,
+  "git_metadata_available": false,
+  "backends": {
+    "runtime": {
+      "rlinf/algorithms/losses.py": {
+        "base_sha256": "aaab7bbcbc4ba552243faeb4bbf481668c2110227eeb4cd2a42f97056a3d5faa",
+        "patched_sha256": "f8c6851d7e225c0c5d4c7a06a6ab0cc6b7fbb4915c7a7d8dbf68dbd2dbde2be3"
+      },
+      "rlinf/workers/actor/fsdp_actor_worker.py": {
+        "base_sha256": "6ab21707195a314f46a1985391c8457406f6a8fdcfdf8e884bd484d914cb4235",
+        "patched_sha256": "1ce7f91fb929a1ed32ed4a529780059c30ebe4251b38572580f52f64f5f5d732"
+      },
+      "rlinf/models/embodiment/openpi/openpi_action_model.py": {
+        "base_sha256": "12e071480e24d03ca1ded1258c28e9fd2435c75a77fef236fbbf646e900662de",
+        "patched_sha256": "ae3ac6b709d3b2ae99939df5326537ee717a5993f33c25d5f933ddffd2bd0ef7"
+      }
+    },
+    "runtime_legacy": {}
+  }
+}

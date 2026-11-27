@@ -1,0 +1,15 @@
+_base_: ../ppo.yaml
+runner:
+  logger:
+    experiment_name: structured_adjust_bottle_seed1
+  max_epochs: 100
+  max_steps: 100
+algorithm:
+  kl_beta: 0.0
+env:
+  train:
+    task_config:
+      task_name: adjust_bottle
+  eval:
+    task_config:
+      task_name: adjust_bottle

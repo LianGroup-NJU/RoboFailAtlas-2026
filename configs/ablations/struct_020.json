@@ -1,0 +1,9 @@
+{
+  "_base_": "../rm_joint.json",
+  "loss_weights": {
+    "failure_actions": 0.2,
+    "failure_types": 0.2,
+    "failure_results": 0.2,
+    "recovery": 0.1
+  }
+}
