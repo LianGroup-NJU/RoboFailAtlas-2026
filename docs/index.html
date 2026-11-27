@@ -9,7 +9,7 @@
   <title>RoboFailAtlas: Structured Reward Learning from Diverse Robot Failures</title>
   <link rel="icon" href="assets/favicon.svg?v=20261119-r7" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/google-sans-flex-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="academic.css?v=20261123-r10">
+  <link rel="stylesheet" href="academic.css?v=20261128-real-world">
   <script src="assets/cases.js" defer></script>
   <script src="media.js?v=20261119-r7" defer></script>
   <script src="app.js?v=20261119-r7" defer></script>
@@ -91,6 +91,18 @@
       <h3 id="real-world">Real-World Learning from Failure Corrections</h3>
       <p>On two PiPER tasks, corrective demonstrations start from failure states reached by the initial policy. With matched additional data and training budgets, they improve average success by <strong>7.0 percentage points</strong> over adding standard successful demonstrations.</p>
       <figure class="figure-full real-world-figure"><img src="assets/real-world-results.png?v=20261119-r4" loading="lazy" alt="Manuscript PiPER block-stacking and block-placement results"><figcaption>Real-world evaluation on block stacking and block placement, with 50 trials per policy and task.</figcaption></figure>
+      <div class="real-world-videos" aria-label="PiPER real-world task recordings">
+        <figure class="real-world-video">
+          <h4>Block stacking</h4>
+          <video id="real-world-stacking-video" controls muted playsinline preload="none" width="1280" height="720" poster="assets/piper-block-stacking-poster.jpg?v=20261128" data-media-src="assets/piper-block-stacking-2x.mp4?v=20261128" aria-label="PiPER robot stacking the yellow block on the red block at twice the recorded speed"></video>
+          <figcaption>PiPER robot · 2× speed</figcaption>
+        </figure>
+        <figure class="real-world-video">
+          <h4>Block placement</h4>
+          <video id="real-world-placement-video" controls muted playsinline preload="none" width="1280" height="720" poster="assets/piper-block-placement-poster.jpg?v=20261128" data-media-src="assets/piper-block-placement-2x.mp4?v=20261128" aria-label="PiPER robot placing the blue block on the target platform at twice the recorded speed"></video>
+          <figcaption>PiPER robot · 2× speed</figcaption>
+        </figure>
+      </div>
     </div></section>
     <section class="section" id="demo"><div class="container container-medium">
       <h2>Interactive Demo</h2>
