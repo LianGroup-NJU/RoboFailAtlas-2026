@@ -2,7 +2,7 @@
 
 **Structured Reward Learning from Diverse Robot Failures**
 
-[Project website](https://liangroup-nju.github.io/RoboFailAtlas/)
+[Project website](https://liangroup-nju.github.io/RoboFailAtlas-2026/)
 
 This repository contains reward-model training and evaluation, policy-learning
 adapters, and the project website.
@@ -58,11 +58,10 @@ The website requires no build step. Preview it from this repository:
 python -m http.server 8000 --directory docs
 ```
 
-Open <http://localhost:8000>. The public website is maintained separately in
-[LianGroup-NJU/RoboFailAtlas](https://github.com/LianGroup-NJU/RoboFailAtlas).
-GitHub Pages deploys that repository automatically from `main` / `(root)`.
-The `docs/` directory here retains the website snapshot included with the code.
-Confirmed resource links are configured in `release.json` in the website repository.
+Open <http://localhost:8000>. GitHub Pages serves the website from this
+repository's `main` branch and `/docs` directory. Push website changes under
+`docs/` to update the live site automatically. Confirmed resource links are
+configured in [`docs/release.json`](docs/release.json).
 
 ## License and resources
 

@@ -1,6 +1,9 @@
 # RoboFailAtlas
 
 本仓库包含奖励模型训练与评测、策略学习适配代码和项目网站。
+
+项目网站：https://liangroup-nju.github.io/RoboFailAtlas-2026/
+网站从本仓库的 `main` 分支 `/docs` 目录自动部署。
 安装与运行入口见 [README](README.md)。
 
 - `src/`、`scripts/`：模型、数据接口、训练与评测入口。
