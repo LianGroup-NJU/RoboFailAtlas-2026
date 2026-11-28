@@ -2,7 +2,13 @@
 
 本仓库包含奖励模型训练与评测、策略学习适配代码和项目网站。
 
-项目网站：https://liangroup-nju.github.io/RoboFailAtlas-2026/
+[项目主页](https://liangroup-nju.github.io/RoboFailAtlas-2026/) ·
+[轨迹数据集](https://huggingface.co/datasets/LianGroup-NJU/RoboFailAtlas) ·
+[Joint 奖励模型](https://huggingface.co/LianGroup-NJU/RoboFailAtlas-Joint-RM) ·
+[Qwen3-VL-4B-Instruct 基座模型](https://huggingface.co/LianGroup-NJU/Qwen3-VL-4B-Instruct)
+
+数据集仓库提供[结构化标注](https://huggingface.co/datasets/LianGroup-NJU/RoboFailAtlas/tree/main/annotations)和[轨迹上传进度](https://huggingface.co/datasets/LianGroup-NJU/RoboFailAtlas/blob/main/upload-status.json)。
+
 网站从本仓库的 `main` 分支 `/docs` 目录自动部署。
 安装与运行入口见 [README](README.md)。
 

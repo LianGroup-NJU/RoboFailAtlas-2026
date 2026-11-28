@@ -2,10 +2,16 @@
 
 **Structured Reward Learning from Diverse Robot Failures**
 
-[Project website](https://liangroup-nju.github.io/RoboFailAtlas-2026/)
+[Project website](https://liangroup-nju.github.io/RoboFailAtlas-2026/) ·
+[Dataset](https://huggingface.co/datasets/LianGroup-NJU/RoboFailAtlas) ·
+[Joint reward model](https://huggingface.co/LianGroup-NJU/RoboFailAtlas-Joint-RM) ·
+[Qwen3-VL-4B-Instruct base model](https://huggingface.co/LianGroup-NJU/Qwen3-VL-4B-Instruct)
 
 This repository contains reward-model training and evaluation, policy-learning
 adapters, and the project website.
+
+The dataset repository includes the [structured annotations](https://huggingface.co/datasets/LianGroup-NJU/RoboFailAtlas/tree/main/annotations)
+and [trajectory upload progress](https://huggingface.co/datasets/LianGroup-NJU/RoboFailAtlas/blob/main/upload-status.json).
 
 ## Quick start
 
